@@ -3,8 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weichun Zhou - Resume</title>
+    <title>Our Team & Personas</title>
+    
+    <!-- 引入免费的Google字体，让英文字体看起来和原图一样高级 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
     <style>
+        /* 全局样式重置 */
         * {
             margin: 0;
             padding: 0;
@@ -12,330 +19,251 @@
         }
 
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
-            background: #f5f5f5;
-            padding: 40px 20px;
-            line-height: 1.6;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f5f4ef; /* 仿原图的米色背景 */
             color: #333;
+            line-height: 1.6;
         }
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            padding: 40px;
+        h1, h2, h3 {
+            font-family: 'Lora', serif; /* 标题使用衬线字体 */
+            color: #1a202c;
         }
 
-        .header {
+        /* 顶部导航栏 */
+        .navbar {
+            background-color: #1b202c; /* 深蓝/深灰色 */
+            padding: 1.2rem 0;
             text-align: center;
-            margin-bottom: 35px;
-            padding-bottom: 25px;
-            border-bottom: 2px solid #eee;
         }
 
-        .header h1 {
-            font-size: 2rem;
-            color: #2c3e50;
-            margin-bottom: 8px;
-        }
-
-        .header a {
-            color: #3498db;
+        .navbar a {
+            color: white;
             text-decoration: none;
-        }
-
-        .header a:hover {
-            text-decoration: underline;
-        }
-
-        .section {
-            margin-bottom: 30px;
-        }
-
-        .section-title {
-            font-size: 1.2rem;
-            color: #2c3e50;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-        }
-
-        .edu-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 10px;
-        }
-
-        .edu-school {
+            margin: 0 1.5rem;
             font-weight: 600;
-            color: #2c3e50;
+            font-size: 1rem;
+            transition: color 0.3s;
         }
 
-        .edu-date {
-            color: #888;
-            font-size: 0.9rem;
+        .navbar a:hover {
+            color: #e05e36; /* 鼠标悬停变色 */
         }
 
-        .edu-major {
-            color: #555;
-            margin-bottom: 8px;
+        /* 页面主体容器 */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 20px;
         }
 
-        .scholarship {
-            color: #e67e22;
-            font-size: 0.9rem;
-            margin-bottom: 12px;
-        }
-
-        .grades-table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.9rem;
-            margin-top: 10px;
-        }
-
-        .grades-table th,
-        .grades-table td {
-            padding: 8px 12px;
-            text-align: left;
-            border: 1px solid #eee;
-        }
-
-        .grades-table th {
-            background: #f8f9fa;
-            font-weight: 600;
-        }
-
-        .grades-table td:last-child {
+        /* 模块标题通用样式 */
+        .section-header {
             text-align: center;
-            color: #3498db;
-            font-weight: 500;
+            margin-bottom: 3.5rem;
         }
 
-        .exp-item {
-            margin-bottom: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #eee;
+        .section-header h2 {
+            font-size: 2.8rem;
+            margin-bottom: 0.5rem;
         }
 
-        .exp-item:last-child {
-            border-bottom: none;
-            margin-bottom: 0;
-            padding-bottom: 0;
+        .header-line {
+            width: 60px;
+            height: 3px;
+            background-color: #e05e36; /* 标题下方的橙色短线 */
+            margin: 0 auto;
         }
 
-        .exp-header {
-            display: flex;
-            justify-content: space-between;
-            margin-bottom: 8px;
+        /* 小组成员网格 (2x2) */
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
         }
 
-        .exp-title {
-            font-weight: 600;
-            color: #2c3e50;
+        /* 通用卡片样式 */
+        .card {
+            background-color: #ffffff;
+            border-radius: 12px;
+            padding: 3rem 2rem;
+            text-align: center;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04); /* 柔和的阴影 */
+            transition: transform 0.3s;
         }
 
-        .exp-date {
-            color: #888;
-            font-size: 0.9rem;
+        .card:hover {
+            transform: translateY(-5px); /* 鼠标悬停微微上浮 */
         }
 
-        .exp-desc {
+        /* 头像样式 */
+        .avatar {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%; /* 圆形 */
+            object-fit: cover; /* 保证图片不变形 */
+            border: 6px solid #f9f9f9; /* 头像外的浅灰色边框 */
+            margin-bottom: 1.5rem;
+        }
+
+        /* 名字和ID */
+        .card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .student-id {
+            color: #1c7454; /* 原图中的墨绿色 */
+            font-weight: 700;
+            font-size: 0.95rem;
+            margin-bottom: 1.2rem;
+        }
+
+        .bio {
             color: #555;
+            font-size: 1rem;
+            padding: 0 1rem;
+        }
+
+        /* ========================
+           Persona 区域样式
+           ======================== */
+        .persona-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 两个Persona左右并排 */
+            gap: 2.5rem;
+        }
+
+        .persona-card {
+            text-align: left;
+            padding: 2.5rem;
+        }
+
+        .persona-card h3 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+            color: #e05e36;
+        }
+
+        .persona-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 1.5rem;
+            background-color: #eee;
+        }
+
+        .persona-info p {
+            margin-bottom: 0.8rem;
             font-size: 0.95rem;
         }
-
-        .tech-tags {
-            margin-top: 8px;
+        
+        .persona-info strong {
+            color: #1a202c;
         }
 
-        .tech-tag {
-            display: inline-block;
-            background: #ecf0f1;
-            color: #555;
-            padding: 3px 10px;
-            border-radius: 4px;
-            font-size: 0.8rem;
-            margin: 2px;
-        }
-
-        .skills-row {
-            margin-bottom: 12px;
-        }
-
-        .skills-row strong {
-            color: #2c3e50;
-        }
-
-        .footer {
-            text-align: center;
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #eee;
-            color: #999;
-            font-size: 0.85rem;
-        }
-
-        @media (max-width: 600px) {
-            .container {
-                padding: 25px;
+        /* 响应式设计：手机端自动变成单列 */
+        @media (max-width: 768px) {
+            .team-grid, .persona-grid {
+                grid-template-columns: 1fr;
             }
-
-            .edu-header,
-            .exp-header {
-                flex-direction: column;
-            }
-
-            .grades-table {
-                font-size: 0.8rem;
+            .navbar a {
+                display: block;
+                margin: 0.8rem 0;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header class="header">
-            <h1>Weichun Zhou</h1>
-            <p><a href="mailto:weichun.zhou23@xjtlu.edu.cn">weichun.zhou23@xjtlu.edu.cn</a></p>
-        </header>
 
-        <section class="section">
-            <h2 class="section-title">Education</h2>
-            <div class="edu-header">
-                <span class="edu-school">Xi'an Jiaotong-Liverpool University (XJTLU)</span>
-                <span class="edu-date">Sep 2023 - Mar 2026</span>
+    <!-- 顶部导航栏 -->
+    <nav class="navbar">
+        <a href="#team">Team</a>
+        <a href="#personas">User Personas</a>
+        <a href="#ai">AI References</a>
+        <a href="#tech">Technical Reflection</a>
+    </nav>
+
+    <!-- Our Team 区域 -->
+    <section id="team" class="container">
+        <div class="section-header">
+            <h2>Our Team</h2>
+            <div class="header-line"></div>
+        </div>
+
+        <div class="team-grid">
+            <!-- 成员 1 -->
+            <div class="card">
+                <!-- 替换 src 里的图片链接，可以使用相对路径如 ./images/avatar1.jpg -->
+                <img src="https://via.placeholder.com/160" alt="Avatar" class="avatar">
+                <h3>[Biaolong Xie]</h3>
+                <p class="student-id">ID: [2363609]</p>
+                <p class="bio">[Zhuzhou. Chief Last-Minute Expert. Looks calm, panics internally.]</p>
             </div>
-            <div class="edu-major">B.Sc. in Information and Computing Science</div>
-            <div class="scholarship">🏆 Second-Class Entrance Scholarship</div>
-            
-            <table class="grades-table">
-                <tr>
-                    <th>Year</th>
-                    <th>Course</th>
-                    <th>Grade</th>
-                </tr>
-                <tr>
-                    <td rowspan="2">Year 1</td>
-                    <td>Calculus (Science & Engineering)</td>
-                    <td>90</td>
-                </tr>
-                <tr>
-                    <td>Linear Algebra</td>
-                    <td>83</td>
-                </tr>
-                <tr>
-                    <td rowspan="8">Year 2</td>
-                    <td>Database</td>
-                    <td>83</td>
-                </tr>
-                <tr>
-                    <td>Java Programming</td>
-                    <td>83</td>
-                </tr>
-                <tr>
-                    <td>Operating Systems</td>
-                    <td>81</td>
-                </tr>
-                <tr>
-                    <td>Computer Systems</td>
-                    <td>80</td>
-                </tr>
-                <tr>
-                    <td>Artificial Intelligence</td>
-                    <td>79</td>
-                </tr>
-                <tr>
-                    <td>Algorithms</td>
-                    <td>79</td>
-                </tr>
-                <tr>
-                    <td>Data Structures</td>
-                    <td>77</td>
-                </tr>
-                <tr>
-                    <td>Discrete Mathematics</td>
-                    <td>74</td>
-                </tr>
-            </table>
-        </section>
 
-        <section class="section">
-            <h2 class="section-title">Research & Experience</h2>
-            
-            <div class="exp-item">
-                <div class="exp-header">
-                    <span class="exp-title">SURF Research Project (SURF-2025-0376)</span>
-                    <span class="exp-date">2025</span>
-                </div>
-                <p class="exp-desc">
-                    Dynamic Prompt Optimizing Based on Large Models for Text-to-Image Generation — 
-                    Researching style transfer using LLM-based prompt engineering for image generation.
-                </p>
-                <div class="tech-tags">
-                    <span class="tech-tag">LLM</span>
-                    <span class="tech-tag">Stable Diffusion</span>
-                    <span class="tech-tag">Prompt Engineering</span>
+            <!-- 成员 2 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/160" alt="Avatar" class="avatar">
+                <h3>[Weichun Zhou]</h3>
+                <p class="student-id">ID: [2360807]</p>
+                <p class="bio">[Virgo  | Chief Overthinking Officer.]</p>
+            </div>
+
+            <!-- 成员 3 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/160" alt="Avatar" class="avatar">
+                <h3>[Kunyang Zhang]</h3>
+                <p class="student-id">ID: [2362396]</p>
+                <p class="bio">[Leo 🦁 | Chief Late-Night Officer. Powered by pure curiosity and chronic sleep deprivation.]</p>
+            </div>
+
+            <!-- 成员 4 -->
+            <div class="card">
+                <img src="https://via.placeholder.com/160" alt="Avatar" class="avatar">
+                <h3>[Ma Ning]</h3>
+                <p class="student-id">ID: [2360965]</p>
+                <p class="bio">[Chief Anxiety Officer (CAO), Janja Garnbret self-shipper.]</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- User Personas 区域 -->
+    <section id="personas" class="container">
+        <div class="section-header">
+            <h2>User Personas</h2>
+            <div class="header-line"></div>
+        </div>
+
+        <div class="persona-grid">
+            <!-- Persona 1 -->
+            <div class="card persona-card">
+                <h3>Persona 1: [填写身份/名字]</h3>
+                <!-- 替换 src 里的图片链接 -->
+                <img src="https://via.placeholder.com/400x250" alt="Persona 1" class="persona-image">
+                <div class="persona-info">
+                    <p><strong>Demographics (人口统计):</strong> [填写年龄、职业、居住地等]</p>
+                    <p><strong>Goals (目标):</strong> [填写该用户的核心诉求和目标]</p>
+                    <p><strong>Frustrations (痛点):</strong> [填写该用户目前遇到的困难和痛点]</p>
+                    <p><strong>Scenario (使用场景):</strong> [填写该用户会在什么情况下使用你们的产品]</p>
                 </div>
             </div>
 
-            <div class="exp-item">
-                <div class="exp-header">
-                    <span class="exp-title">Data Engineer Intern · Zhongweixin Software</span>
-                    <span class="exp-date">Jan 2025</span>
-                </div>
-                <p class="exp-desc">
-                    Built an occupational health data warehouse to break data silos between two legacy systems. 
-                    Performed ETL to migrate data from Oracle and MySQL to Doris. 
-                    Completed data mapping, cleaning, and migration for 33 tables.
-                </p>
-                <div class="tech-tags">
-                    <span class="tech-tag">ETL</span>
-                    <span class="tech-tag">Oracle</span>
-                    <span class="tech-tag">MySQL</span>
-                    <span class="tech-tag">Doris</span>
+            <!-- Persona 2 -->
+            <div class="card persona-card">
+                <h3>Persona 2: [填写身份/名字]</h3>
+                <!-- 替换 src 里的图片链接 -->
+                <img src="https://via.placeholder.com/400x250" alt="Persona 2" class="persona-image">
+                <div class="persona-info">
+                    <p><strong>Demographics (人口统计):</strong> [填写年龄、职业、居住地等]</p>
+                    <p><strong>Goals (目标):</strong> [填写该用户的核心诉求和目标]</p>
+                    <p><strong>Frustrations (痛点):</strong> [填写该用户目前遇到的困难和痛点]</p>
+                    <p><strong>Scenario (使用场景):</strong> [填写该用户会在什么情况下使用你们的产品]</p>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="exp-item">
-                <div class="exp-header">
-                    <span class="exp-title">Mathematical Modeling Competition</span>
-                    <span class="exp-date">2025</span>
-                </div>
-                <p class="exp-desc">
-                    Participated in the 2025 CUMCM (China Undergraduate Mathematical Contest in Modeling), Category C.
-                </p>
-                <div class="tech-tags">
-                    <span class="tech-tag">Python</span>
-                    <span class="tech-tag">Data Analysis</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="section">
-            <h2 class="section-title">Skills & Interests</h2>
-            
-            <div class="skills-row">
-                <strong>Programming:</strong> Python, Java, SQL
-            </div>
-            <div class="skills-row">
-                <strong>Technologies:</strong> PyTorch, Stable Diffusion, ETL, Data Warehouse, NumPy, Pandas
-            </div>
-            <div class="skills-row">
-                <strong>Tools:</strong> GitHub, Jupyter Notebook, Hugging Face
-            </div>
-            <div class="skills-row">
-                <strong>Languages:</strong> English (IELTS 7.0), Spanish (CEFR B2)
-            </div>
-            <div class="skills-row">
-                <strong>Interests:</strong> Badminton, Stock Trading, Swimming
-            </div>
-        </section>
-
-        <footer class="footer">
-            © 2025 Weichun Zhou
-        </footer>
-    </div>
 </body>
 </html>
