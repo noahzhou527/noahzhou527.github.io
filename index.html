@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Team & Personas</title>
+    <title>Our Team & Personas | Climbing App</title>
     
-    <!-- 引入免费的Google字体，让英文字体看起来和原图一样高级 -->
+    <!-- 引入新的运动感字体 Montserrat 和 Open Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
     <style>
         /* 全局样式重置 */
@@ -20,59 +20,65 @@
 
         body {
             font-family: 'Open Sans', sans-serif;
-            background-color: #f5f4ef; /* 仿原图的米色背景 */
+            background-color: #f4f6f8; /* 偏向户外的浅石灰色背景 */
             color: #333;
             line-height: 1.6;
         }
 
         h1, h2, h3 {
-            font-family: 'Lora', serif; /* 标题使用衬线字体 */
-            color: #1a202c;
+            font-family: 'Montserrat', sans-serif; /* 标题使用更现代、运动感的字体 */
+            color: #2c3e50; /* 深岩石灰 */
         }
 
         /* 顶部导航栏 */
         .navbar {
-            background-color: #1b202c; /* 深蓝/深灰色 */
+            background-color: #1e2b38; /* 深邃的夜空蓝/暗岩灰色 */
             padding: 1.2rem 0;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         .navbar a {
-            color: white;
+            color: #ecf0f1;
             text-decoration: none;
             margin: 0 1.5rem;
             font-weight: 600;
             font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
             transition: color 0.3s;
         }
 
         .navbar a:hover {
-            color: #e05e36; /* 鼠标悬停变色 */
+            color: #e67e22; /* 户外安全绳/锁扣的亮橙色 */
         }
 
         /* 页面主体容器 */
         .container {
             max-width: 1100px;
             margin: 0 auto;
-            padding: 4rem 20px;
+            padding: 4.5rem 20px;
         }
 
         /* 模块标题通用样式 */
         .section-header {
             text-align: center;
-            margin-bottom: 3.5rem;
+            margin-bottom: 4rem;
         }
 
         .section-header h2 {
             font-size: 2.8rem;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
         .header-line {
-            width: 60px;
-            height: 3px;
-            background-color: #e05e36; /* 标题下方的橙色短线 */
+            width: 80px;
+            height: 4px;
+            background-color: #e67e22; /* 橙色分割线 */
             margin: 0 auto;
+            border-radius: 2px;
         }
 
         /* 小组成员网格 (2x2) */
@@ -88,39 +94,45 @@
             border-radius: 12px;
             padding: 3rem 2rem;
             text-align: center;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04); /* 柔和的阴影 */
-            transition: transform 0.3s;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05); /* 更柔和的高级阴影 */
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #eef0f2;
         }
 
         .card:hover {
-            transform: translateY(-5px); /* 鼠标悬停微微上浮 */
+            transform: translateY(-8px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
         }
 
         /* 头像样式 */
         .avatar {
-            width: 160px;
-            height: 160px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%; /* 圆形 */
-            object-fit: cover; /* 保证图片不变形 */
-            border: 6px solid #f9f9f9; /* 头像外的浅灰色边框 */
+            object-fit: cover;
+            border: 4px solid #e67e22; /* 头像加上橙色强调边框 */
+            padding: 4px;
             margin-bottom: 1.5rem;
+            background-color: #fff;
         }
 
         /* 名字和ID */
         .card h3 {
-            font-size: 1.8rem;
-            margin-bottom: 0.3rem;
+            font-size: 1.6rem;
+            margin-bottom: 0.4rem;
         }
 
         .student-id {
-            color: #1c7454; /* 原图中的墨绿色 */
+            color: #2980b9; /* 运动蓝 */
             font-weight: 700;
             font-size: 0.95rem;
             margin-bottom: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
         .bio {
-            color: #555;
+            color: #666;
             font-size: 1rem;
             padding: 0 1rem;
         }
@@ -130,37 +142,68 @@
            ======================== */
         .persona-grid {
             display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 两个Persona左右并排 */
+            grid-template-columns: repeat(2, 1fr);
             gap: 2.5rem;
         }
 
         .persona-card {
             text-align: left;
+            padding: 0; /* 移除默认内边距，为了让图片置顶铺满 */
+            overflow: hidden;
+        }
+
+        .persona-content {
             padding: 2.5rem;
         }
 
         .persona-card h3 {
-            text-align: center;
+            text-align: left;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+            font-size: 1.8rem;
+        }
+        
+        .persona-tag {
+            display: inline-block;
+            background-color: #e67e22;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
             margin-bottom: 1.5rem;
-            color: #e05e36;
         }
 
         .persona-image {
             width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 1.5rem;
+            height: 320px; /* 稍微增高图片区域 */
+            object-fit: cover; /* 保证图片填满区域 */
+            object-position: top; /* 【核心修复】优先显示图片的顶部，这样倒挂的人就不会被截掉 */
             background-color: #eee;
+            border-bottom: 4px solid #e67e22;
         }
 
-        .persona-info p {
-            margin-bottom: 0.8rem;
+        .persona-info {
+            margin-bottom: 1.2rem;
+        }
+
+        .persona-info h4 {
+            color: #2980b9;
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            margin-top: 1.2rem;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .persona-info ul {
+            list-style-type: disc;
+            margin-left: 1.2rem;
+            color: #555;
             font-size: 0.95rem;
         }
-        
-        .persona-info strong {
-            color: #1a202c;
+
+        .persona-info ul li {
+            margin-bottom: 0.4rem;
         }
 
         /* 响应式设计：手机端自动变成单列 */
@@ -195,35 +238,34 @@
         <div class="team-grid">
             <!-- 成员 1 -->
             <div class="card">
-                <!-- 替换 src 里的图片链接，可以使用相对路径如 ./images/avatar1.jpg -->
                 <img src="member1.jpg" alt="Avatar" class="avatar">
-                <h3>[Biaolong Xie]</h3>
-                <p class="student-id">ID: [2363609]</p>
-                <p class="bio">[Gemini | Zhuzhou]</p>
+                <h3>Biaolong Xie</h3>
+                <p class="student-id">ID: 2363609</p>
+                <p class="bio">Gemini ♊ | Zhuzhou.</p>
             </div>
 
             <!-- 成员 2 -->
             <div class="card">
                 <img src="member2.jpg" alt="Avatar" class="avatar">
-                <h3>[Weichun Zhou]</h3>
-                <p class="student-id">ID: [2360807]</p>
-                <p class="bio">[Virgo | Wuxi]</p>
+                <h3>Weichun Zhou</h3>
+                <p class="student-id">ID: 2360807</p>
+                <p class="bio">Virgo ♍ | Wuxi.</p>
             </div>
 
             <!-- 成员 3 -->
             <div class="card">
                 <img src="member3.jpg" alt="Avatar" class="avatar">
-                <h3>[Kunyang Zhang]</h3>
-                <p class="student-id">ID: [2362396]</p>
-                <p class="bio">[Virgo | Zhengzhou]</p>
+                <h3>Kunyang Zhang</h3>
+                <p class="student-id">ID: 2362396</p>
+                <p class="bio">Virgo ♍ | Zhengzhou.</p>
             </div>
 
             <!-- 成员 4 -->
             <div class="card">
                 <img src="member4.jpg" alt="Avatar" class="avatar">
-                <h3>[Ma Ning]</h3>
-                <p class="student-id">ID: [2360965]</p>
-                <p class="bio">[Cancer | Nantong]</p>
+                <h3>Ma Ning</h3>
+                <p class="student-id">ID: 2360965</p>
+                <p class="bio">Cancer ♋ | Nantong.</p>
             </div>
         </div>
     </section>
@@ -237,31 +279,84 @@
         </div>
 
         <div class="persona-grid">
-            <!-- Persona 1 -->
+            <!-- Persona 1: 攀岩新手 -->
             <div class="card persona-card">
-                <h3>Persona 1: [填写身份/名字]</h3>
-                <!-- 替换 src 里的图片链接 -->
-                <img src="persona1.jpg" alt="Persona 1" class="persona-image">
-                <div class="persona-info">
-                    <p><strong>Demographics (人口统计):</strong> [填写年龄、职业、居住地等]</p>
-                    <p><strong>Goals (目标):</strong> [填写该用户的核心诉求和目标]</p>
-                    <p><strong>Frustrations (痛点):</strong> [填写该用户目前遇到的困难和痛点]</p>
-                    <p><strong>Scenario (使用场景):</strong> [填写该用户会在什么情况下使用你们的产品]</p>
+                <!-- 这里放新手攀岩图片 -->
+                <img src="persona1.jpg" alt="Indoor Beginner Climber" class="persona-image">
+                
+                <div class="persona-content">
+                    <h3>Alex Chen</h3>
+                    <div class="persona-tag">Novice Boulderer (新手)</div>
+                    
+                    <div class="persona-info">
+                        <h4>🧗‍♂️ Demographics</h4>
+                        <ul>
+                            <li><strong>Age & Occupation:</strong> 25, Software Engineer</li>
+                            <li><strong>Experience:</strong> 3 months (Climbs V2-V3 indoors)</li>
+                            <li><strong>Location:</strong> Urban city, climbs at local indoor gyms</li>
+                        </ul>
+
+                        <h4>🎯 Goals</h4>
+                        <ul>
+                            <li>Wants to build upper body strength and overcome fear of heights.</li>
+                            <li>Looking to make new friends in the climbing community.</li>
+                            <li>Needs to learn proper footwork technique instead of just using arm strength.</li>
+                        </ul>
+
+                        <h4>😟 Frustrations</h4>
+                        <ul>
+                            <li>Intimidated by complex climbing jargon and experienced climbers.</li>
+                            <li>Struggles with tracking personal progress and remembering routes.</li>
+                            <li>Finger skin hurts easily, doesn't know how to properly rest/recover.</li>
+                        </ul>
+
+                        <h4>📍 Scenario</h4>
+                        <ul>
+                            <li>Goes to the gym twice a week after work. Usually stares at a boulder problem not knowing how to start, wishing there was an easy guide or community app to show the "beta" (solution) for beginners.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
 
-            <!-- Persona 2 -->
+            <!-- Persona 2: 攀岩老手 (倒挂图片) -->
             <div class="card persona-card">
-                <h3>Persona 2: [填写身份/名字]</h3>
-                <!-- 替换 src 里的图片链接 -->
-                <img src="persona2.jpg" alt="Persona 2" class="persona-image">
-                <div class="persona-info">
-                    <p><strong>Demographics (人口统计):</strong> [填写年龄、职业、居住地等]</p>
-                    <p><strong>Goals (目标):</strong> [填写该用户的核心诉求和目标]</p>
-                    <p><strong>Frustrations (痛点):</strong> [填写该用户目前遇到的困难和痛点]</p>
-                    <p><strong>Scenario (使用场景):</strong> [填写该用户会在什么情况下使用你们的产品]</p>
+                <!-- 这个图片的倒挂人物不会再被截断了 -->
+                <img src="persona2.jpg" alt="Expert Outdoor Climber" class="persona-image">
+                
+                <div class="persona-content">
+                    <h3>Sarah Jenkins</h3>
+                    <div class="persona-tag">Lead Climbing Expert (老手)</div>
+                    
+                    <div class="persona-info">
+                        <h4>🧗‍♀️ Demographics</h4>
+                        <ul>
+                            <li><strong>Age & Occupation:</strong> 31, Freelance Designer / Outdoor Guide</li>
+                            <li><strong>Experience:</strong> 8 years (Projects 5.13a / V8 outdoors)</li>
+                            <li><strong>Location:</strong> Lives near mountains, travels for outdoor crags</li>
+                        </ul>
+
+                        <h4>🎯 Goals</h4>
+                        <ul>
+                            <li>Projecting hard outdoor routes and pushing physical limits.</li>
+                            <li>Wants detailed topographical maps (Topos) for obscure, hidden climbing areas.</li>
+                            <li>Needs to find reliable, safety-conscious belay partners for weekend trips.</li>
+                        </ul>
+
+                        <h4>😟 Frustrations</h4>
+                        <ul>
+                            <li>Unexpected weather changes ruining a planned outdoor climbing weekend.</li>
+                            <li>Lack of updated, accurate route conditions (e.g., loose rocks, wet holds) online.</li>
+                            <li>Standard fitness apps don't track specialized climbing metrics like hangboard time.</li>
+                        </ul>
+
+                        <h4>📍 Scenario</h4>
+                        <ul>
+                            <li>Planning a 3-day trip to a limestone cave. Needs a platform to check micro-climate weather forecasts, download offline route maps, and read recent comments from other advanced climbers about the rock condition.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
+            
         </div>
     </section>
 
