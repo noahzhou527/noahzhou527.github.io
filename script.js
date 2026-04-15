@@ -27,6 +27,10 @@ function setupScrollIndicator() {
   });
 
   hero.appendChild(indicator);
+
+  requestAnimationFrame(() => {
+    indicator.classList.add('is-visible');
+  });
 }
 
 function setupSmoothScroll() {
@@ -71,6 +75,7 @@ function applyRevealStagger() {
     '.stat-grid',
     '.grid-2',
     '.grid-3',
+    '.quick-grid',
     '.team-grid',
     '.persona-grid',
     '.mock-list',
@@ -79,7 +84,7 @@ function applyRevealStagger() {
   staggerGroups.forEach((selector) => {
     document.querySelectorAll(selector).forEach((group) => {
       [...group.children].forEach((child, index) => {
-        if (child.classList.contains('reveal')) {
+        if (child.classList.contains('reveal') && !child.style.getPropertyValue('--reveal-delay')) {
           child.style.setProperty('--reveal-delay', `${Math.min(index * 100, 400)}ms`);
         }
       });
@@ -249,12 +254,17 @@ function setupParticles() {
     particles.push(new Particle());
   }
 
-  window.addEventListener('resize', resizeCanvas);
+  let resizeTimer;
+
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = window.setTimeout(resizeCanvas, 80);
+  });
   window.addEventListener('pointermove', (event) => {
     mouse.x = event.clientX;
     mouse.y = event.clientY;
   });
-  window.addEventListener('pointerleave', () => {
+  document.addEventListener('mouseleave', () => {
     mouse.x = null;
     mouse.y = null;
   });
@@ -262,8 +272,31 @@ function setupParticles() {
   animate();
 }
 
+function setupGlowParallax() {
+  if (prefersReducedMotion) {
+    return;
+  }
+
+  const glows = [...document.querySelectorAll('.glow')];
+
+  if (!glows.length) {
+    return;
+  }
+
+  window.addEventListener('pointermove', (event) => {
+    const xRatio = (event.clientX / window.innerWidth - 0.5) * 18;
+    const yRatio = (event.clientY / window.innerHeight - 0.5) * 18;
+
+    glows.forEach((glow, index) => {
+      const direction = index % 2 === 0 ? 1 : -1;
+      glow.style.transform = `translate(${xRatio * direction}px, ${yRatio * direction}px)`;
+    });
+  });
+}
+
 setupScrollIndicator();
 setupSmoothScroll();
 applyRevealStagger();
 setupReveal();
 setupParticles();
+setupGlowParallax();

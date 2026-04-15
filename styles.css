@@ -1117,3 +1117,117 @@ main,
     grid-template-columns: 1fr;
   }
 }
+
+/* Final motion pass */
+.quick-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.quick-grid .card {
+  min-height: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.nav {
+  animation: fadeSlideUp 0.7s ease-out both;
+}
+
+.hero {
+  overflow: clip;
+}
+
+.hero .reveal {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-badge .dot {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.card,
+.stat,
+.member-card,
+.persona-wrap,
+.persona-box,
+.mock-item,
+.btn,
+.nav-links a {
+  will-change: transform, opacity;
+}
+
+.card,
+.stat,
+.member-card,
+.persona-wrap,
+.mock-shell,
+.highlight-panel,
+.quote-card {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.card:hover,
+.stat:hover,
+.member-card:hover,
+.persona-wrap:hover,
+.persona-box:hover,
+.mock-item:hover {
+  transform: translateY(-10px);
+}
+
+.card:hover h3,
+.member-card:hover h3,
+.mock-item:hover h4 {
+  color: #fff;
+}
+
+.member-photo img,
+.persona-side img,
+.mock-item,
+.card::before,
+.feature-card::after {
+  transition-duration: 0.45s;
+}
+
+.scroll-indicator {
+  opacity: 0;
+}
+
+.scroll-indicator.is-visible {
+  opacity: 1;
+}
+
+.reveal-delay-1 {
+  --reveal-delay: 100ms;
+}
+
+.reveal-delay-2 {
+  --reveal-delay: 200ms;
+}
+
+.reveal-delay-3 {
+  --reveal-delay: 300ms;
+}
+
+.reveal-delay-4 {
+  --reveal-delay: 400ms;
+}
+
+@media (max-width: 1024px) {
+  .quick-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .quick-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .quick-grid .card {
+    min-height: auto;
+  }
+}
