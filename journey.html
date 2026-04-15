@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRAG | Journey Map</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="background-grid"></div>
+  <div class="glow orange"></div>
+  <div class="glow blue"></div>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">⛰</span>
+        <span>CRAG</span>
+      </a>
+      <div class="nav-links">
+        <a class="" href="./index.html">Home</a>
+        <a class="" href="./team.html">Team</a>
+        <a class="" href="./persona.html">Persona</a>
+        <a class="active" href="./journey.html">Journey Map</a>
+        <a class="" href="./features.html">Playful Features</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="page-hero reveal">
+      <span class="eyebrow">Journey Map</span>
+      <h1>From hesitation to <span class="accent">session momentum</span></h1>
+      <p>This journey follows Ethan, a beginner climber, through one gym visit and highlights the moments where CRAG can reduce friction and increase motivation.</p>
+    </section>
+
+    <section class="section">
+      <div class="quote-card reveal" style="margin-bottom: 24px;">
+        <blockquote>“I want to climb more, but sometimes I just stand there and wonder which route I should even try.”</blockquote>
+        <cite>— beginner climber mindset represented in our primary persona</cite>
+      </div>
+      <table class="journey-table reveal">
+        <thead>
+          <tr>
+            <th>Stage</th>
+            <th>Action</th>
+            <th>Thoughts / Feelings</th>
+            <th>Pain Point</th>
+            <th>CRAG Opportunity</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Stage"><div class="stage-card"><strong>Before arriving</strong></div></td>
+            <td data-label="Action">Decides whether to go climbing after class.</td>
+            <td data-label="Thoughts / Feelings">Interested, but not fully motivated.</td>
+            <td data-label="Pain Point">No session goal. Climbing alone feels easier to cancel.</td>
+            <td data-label="CRAG Opportunity">Route Quest suggests a simple challenge for the day.</td>
+          </tr>
+          <tr>
+            <td data-label="Stage"><div class="stage-card"><strong>Entering the gym</strong></div></td>
+            <td data-label="Action">Looks around the wall and scans available routes.</td>
+            <td data-label="Thoughts / Feelings">Curious but slightly intimidated.</td>
+            <td data-label="Pain Point">Experienced climbers make the space feel harder to enter.</td>
+            <td data-label="CRAG Opportunity">The app recommends beginner-friendly problems with less guesswork.</td>
+          </tr>
+          <tr>
+            <td data-label="Stage"><div class="stage-card"><strong>Choosing a problem</strong></div></td>
+            <td data-label="Action">Picks a route based on color and appearance.</td>
+            <td data-label="Thoughts / Feelings">Unsure if the route matches his skill level.</td>
+            <td data-label="Pain Point">Cannot easily tell the intended flow or strategy.</td>
+            <td data-label="CRAG Opportunity">Beta Buddy provides short hints instead of overwhelming instruction.</td>
+          </tr>
+          <tr>
+            <td data-label="Stage"><div class="stage-card"><strong>Attempting the climb</strong></div></td>
+            <td data-label="Action">Falls at the same move a few times.</td>
+            <td data-label="Thoughts / Feelings">Frustrated and self-conscious.</td>
+            <td data-label="Pain Point">No feedback loop, so failure feels random.</td>
+            <td data-label="CRAG Opportunity">Hints and community tips help him adjust without embarrassment.</td>
+          </tr>
+          <tr>
+            <td data-label="Stage"><div class="stage-card"><strong>After the session</strong></div></td>
+            <td data-label="Action">Leaves the gym and tries to remember what happened.</td>
+            <td data-label="Thoughts / Feelings">Not sure whether the session counts as progress.</td>
+            <td data-label="Pain Point">Attempts and improvements feel invisible.</td>
+            <td data-label="CRAG Opportunity">Route Quest logs attempts, badges, and streaks.</td>
+          </tr>
+          <tr>
+            <td data-label="Stage"><div class="stage-card"><strong>Thinking about next time</strong></div></td>
+            <td data-label="Action">Considers coming back later in the week.</td>
+            <td data-label="Thoughts / Feelings">Would feel more confident with a partner.</td>
+            <td data-label="Pain Point">Social barrier reduces consistency.</td>
+            <td data-label="CRAG Opportunity">Climb Circle makes it easier to join a session or meet someone at a similar level.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <div class="grid-3">
+        <div class="card reveal"><span class="kicker">Pain Point 01</span><h3>Route uncertainty</h3><p>Beginners often cannot read the route flow, which makes the first attempt feel confusing rather than exciting.</p></div>
+        <div class="card reveal"><span class="kicker">Pain Point 02</span><h3>Invisible progress</h3><p>Without small markers of growth, users may leave a session feeling like they only failed.</p></div>
+        <div class="card reveal"><span class="kicker">Pain Point 03</span><h3>Low social confidence</h3><p>Many users are more likely to return if they feel connected to people, tips, or a sense of community.</p></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>CRAG — a climbing companion concept for CPT208 Human-Centric Computing.</p>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>

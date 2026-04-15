@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRAG | Playful Features</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <div class="background-grid"></div>
+  <div class="glow orange"></div>
+  <div class="glow blue"></div>
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="./index.html">
+        <span class="brand-mark">⛰</span>
+        <span>CRAG</span>
+      </a>
+      <div class="nav-links">
+        <a class="" href="./index.html">Home</a>
+        <a class="" href="./team.html">Team</a>
+        <a class="" href="./persona.html">Persona</a>
+        <a class="" href="./journey.html">Journey Map</a>
+        <a class="active" href="./features.html">Playful Features</a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <section class="page-hero reveal">
+      <span class="eyebrow">Playful Features</span>
+      <h1>Three features that make climbing feel more <span class="accent">guided, motivating, and social</span></h1>
+      <p>These are the three must-have features for the concept: they are simple enough to prototype in a web app while still clearly expressing the project’s playful direction.</p>
+    </section>
+
+    <section class="section">
+      <div class="grid-3">
+        <article class="card feature-card reveal">
+          <span class="kicker">Feature 01</span>
+          <h3>Route Quest</h3>
+          <p>Turns a gym session into a challenge-driven experience instead of a vague workout.</p>
+          <ul>
+            <li>Choose routes by level, style, or goal</li>
+            <li>Log completion and failed attempts</li>
+            <li>Unlock badges, streaks, and progress markers</li>
+          </ul>
+        </article>
+
+        <article class="card feature-card reveal">
+          <span class="kicker">Feature 02</span>
+          <h3>Beta Buddy</h3>
+          <p>Offers hint-based route guidance that feels approachable for beginners.</p>
+          <ul>
+            <li>Step-by-step hints instead of walls of text</li>
+            <li>Visual prompts for start holds and body position</li>
+            <li>Community tips that do not feel overly expert-heavy</li>
+          </ul>
+        </article>
+
+        <article class="card feature-card reveal">
+          <span class="kicker">Feature 03</span>
+          <h3>Climb Circle</h3>
+          <p>Adds lightweight social coordination so users can find partners and shared momentum.</p>
+          <ul>
+            <li>Post sessions by time, gym, and level</li>
+            <li>Join a climb or mark interest</li>
+            <li>Build accountability and a sense of belonging</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Why these features</span>
+          <h2>Each feature responds to a different human need</h2>
+        </div>
+        <p>Together, the three features cover confidence, progress, and connection — the areas most likely to affect whether users enjoy climbing and keep coming back.</p>
+      </div>
+      <div class="grid-3">
+        <div class="card reveal"><span class="kicker">Confidence</span><h3>Beta Buddy</h3><p>Reduces intimidation by helping users understand what to do without forcing them into expert language or public asking.</p></div>
+        <div class="card reveal"><span class="kicker">Motivation</span><h3>Route Quest</h3><p>Makes progress feel visible through goals, levels, and playful feedback that users can see after each session.</p></div>
+        <div class="card reveal"><span class="kicker">Belonging</span><h3>Climb Circle</h3><p>Helps users feel less alone, which is especially important for beginners trying to turn climbing into a habit.</p></div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="highlight-box">
+        <div class="highlight-panel reveal">
+          <span class="kicker">Prototype Direction</span>
+          <h2 style="font-size:2rem; margin-bottom:12px;">What you can build next</h2>
+          <p style="color:var(--muted); margin-bottom:14px;">A realistic next step is to convert these pages into an interactive mobile-style prototype with clickable cards, session boards, route filters, and simple state changes.</p>
+          <ul>
+            <li>Clickable challenge cards for Route Quest</li>
+            <li>Hint reveal buttons for Beta Buddy</li>
+            <li>Join / Leave actions for Climb Circle</li>
+          </ul>
+        </div>
+        <div class="mock-shell reveal">
+          <div class="mock-top">
+            <strong>Example App Flow</strong>
+            <span class="mock-chip">3 core screens</span>
+          </div>
+          <div class="mock-list">
+            <div class="mock-item"><h4>Home</h4><p>Shows today’s challenge and suggested routes.</p></div>
+            <div class="mock-item"><h4>Route Detail</h4><p>Includes difficulty, quick hints, and attempt logging.</p></div>
+            <div class="mock-item"><h4>Session Board</h4><p>Lets users join a climbing plan and connect with others.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer container">
+    <p>CRAG — a climbing companion concept for CPT208 Human-Centric Computing.</p>
+  </footer>
+  <script src="./script.js"></script>
+</body>
+</html>
