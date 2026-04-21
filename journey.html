@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -30,79 +30,441 @@
   </nav>
 
   <main class="container">
-    <section class="page-hero reveal">
-      <span class="eyebrow">Journey Map</span>
-      <h1>From hesitation to <span class="accent">session momentum</span></h1>
-      <p>This journey follows Alex, a beginner climber, through one gym visit and highlights the moments where CRAG can reduce friction and increase motivation.</p>
-    </section>
-
-    <section class="section">
-      <div class="quote-card reveal" style="margin-bottom: 24px;">
-        <blockquote>"I want to climb more, but sometimes I just stand there and wonder which route I should even try."</blockquote>
-        <cite>- beginner climber mindset represented in our primary persona</cite>
+    <section class="page-hero journey-hero reveal">
+      <div class="journey-hero-copy">
+        <span class="eyebrow">Current-State Journey</span>
+        <h1>Climber <span class="accent">journey map</span></h1>
+        <p>Understanding how a climber moves before, during, and between sessions reveals where motivation fades, where progress becomes invisible, and where community connections break down.</p>
       </div>
-      <table class="journey-table reveal">
-        <thead>
-          <tr>
-            <th>Stage</th>
-            <th>Action</th>
-            <th>Thoughts / Feelings</th>
-            <th>Pain Point</th>
-            <th>CRAG Opportunity</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td data-label="Stage"><div class="stage-card"><strong>Before arriving</strong></div></td>
-            <td data-label="Action">Decides whether to go climbing after class.</td>
-            <td data-label="Thoughts / Feelings">Interested, but not fully motivated.</td>
-            <td data-label="Pain Point">No session goal. Climbing alone feels easier to cancel.</td>
-            <td data-label="CRAG Opportunity">Route Quest suggests a simple challenge for the day.</td>
-          </tr>
-          <tr>
-            <td data-label="Stage"><div class="stage-card"><strong>Entering the gym</strong></div></td>
-            <td data-label="Action">Looks around the wall and scans available routes.</td>
-            <td data-label="Thoughts / Feelings">Curious but slightly intimidated.</td>
-            <td data-label="Pain Point">Experienced climbers make the space feel harder to enter.</td>
-            <td data-label="CRAG Opportunity">The app recommends beginner-friendly problems with less guesswork.</td>
-          </tr>
-          <tr>
-            <td data-label="Stage"><div class="stage-card"><strong>Choosing a problem</strong></div></td>
-            <td data-label="Action">Picks a route based on color and appearance.</td>
-            <td data-label="Thoughts / Feelings">Unsure if the route matches his skill level.</td>
-            <td data-label="Pain Point">Cannot easily tell the intended flow or strategy.</td>
-            <td data-label="CRAG Opportunity">Beta Buddy provides short hints instead of overwhelming instruction.</td>
-          </tr>
-          <tr>
-            <td data-label="Stage"><div class="stage-card"><strong>Attempting the climb</strong></div></td>
-            <td data-label="Action">Falls at the same move a few times.</td>
-            <td data-label="Thoughts / Feelings">Frustrated and self-conscious.</td>
-            <td data-label="Pain Point">No feedback loop, so failure feels random.</td>
-            <td data-label="CRAG Opportunity">Hints and community tips help him adjust without embarrassment.</td>
-          </tr>
-          <tr>
-            <td data-label="Stage"><div class="stage-card"><strong>After the session</strong></div></td>
-            <td data-label="Action">Leaves the gym and tries to remember what happened.</td>
-            <td data-label="Thoughts / Feelings">Not sure whether the session counts as progress.</td>
-            <td data-label="Pain Point">Attempts and improvements feel invisible.</td>
-            <td data-label="CRAG Opportunity">Route Quest logs attempts, badges, and streaks.</td>
-          </tr>
-          <tr>
-            <td data-label="Stage"><div class="stage-card"><strong>Thinking about next time</strong></div></td>
-            <td data-label="Action">Considers coming back later in the week.</td>
-            <td data-label="Thoughts / Feelings">Would feel more confident with a partner.</td>
-            <td data-label="Pain Point">Social barrier reduces consistency.</td>
-            <td data-label="CRAG Opportunity">Climb Circle makes it easier to join a session or meet someone at a similar level.</td>
-          </tr>
-        </tbody>
-      </table>
+      <aside class="journey-brief">
+        <span class="kicker">Scenario</span>
+        <h2>Climber</h2>
+        <p>A climber wants to keep improving, stay motivated, discover climbing opportunities, and feel connected to a climbing community.</p>
+      </aside>
+    </section>
+
+    <section class="section journey-map-section">
+      <div class="journey-map-header reveal">
+        <div class="journey-map-header-copy">
+          <span class="kicker">Journey Map</span>
+          <h2>Six stages shape whether climbing becomes a continuous habit</h2>
+        </div>
+        <p class="journey-map-header-summary">This journey map shows that the central problem is not limited to the climbing session itself. Instead, the experience breaks down across the transitions before, during, and between sessions.</p>
+      </div>
+
+      <nav class="journey-stage-nav reveal" aria-label="Jump to a journey stage">
+        <a class="journey-stage-pill" href="#journey-stage-1"><span>1</span>Planning to Climb</a>
+        <a class="journey-stage-pill" href="#journey-stage-2"><span>2</span>Getting to the Gym</a>
+        <a class="journey-stage-pill" href="#journey-stage-3"><span>3</span>Climbing Session</a>
+        <a class="journey-stage-pill" href="#journey-stage-4"><span>4</span>After the Session</a>
+        <a class="journey-stage-pill is-breakdown" href="#journey-stage-5"><span>5</span>Between Sessions</a>
+        <a class="journey-stage-pill" href="#journey-stage-6"><span>6</span>Rejoining Community</a>
+      </nav>
+
+      <div class="journey-stage-grid">
+        <article id="journey-stage-1" class="journey-stage-card stage-1 reveal" tabindex="-1">
+          <header class="journey-stage-card-head">
+            <span class="journey-stage-number">1</span>
+            <div>
+              <p class="journey-stage-label">Stage</p>
+              <h3>Planning to Climb</h3>
+            </div>
+          </header>
+          <div class="journey-stage-card-body">
+            <section class="journey-stage-group">
+              <h4>User Actions</h4>
+              <ul>
+                <li>Thinks about whether to climb this week</li>
+                <li>Checks messages or social media</li>
+              </ul>
+            </section>
+            <section class="journey-stage-group">
+              <h4>Touchpoints</h4>
+              <ul class="journey-tag-list">
+                <li>Group chats</li>
+                <li>Gym page</li>
+                <li>Friends</li>
+                <li>Memory</li>
+              </ul>
+            </section>
+            <section class="journey-stage-group">
+              <h4>Thoughts</h4>
+              <blockquote class="journey-stage-quote">
+                <p>"Do I have anyone to go with?"</p>
+                <p>"Is there anything happening?"</p>
+              </blockquote>
+            </section>
+            <section class="journey-stage-group">
+              <h4>Emotions</h4>
+              <p class="journey-emotion-pill">Curious, hesitant</p>
+            </section>
+            <div class="journey-stage-callouts">
+              <section class="journey-callout tone-pain">
+                <h4>Pain Points</h4>
+                <ul>
+                  <li>Hard to know who is available</li>
+                  <li>Poor visibility of events or suitable sessions</li>
+                </ul>
+              </section>
+              <section class="journey-callout tone-opportunity">
+                <h4>Opportunities</h4>
+                <ul>
+                  <li>Session discovery</li>
+                  <li>Partner-finding</li>
+                  <li>Event recommendations</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </article>
+
+        <article id="journey-stage-2" class="journey-stage-card stage-2 reveal reveal-delay-1" tabindex="-1">
+          <header class="journey-stage-card-head">
+            <span class="journey-stage-number">2</span>
+            <div>
+              <p class="journey-stage-label">Stage</p>
+              <h3>Getting to the Gym</h3>
+            </div>
+          </header>
+          <div class="journey-stage-card-body">
+            <section class="journey-stage-group">
+              <h4>User Actions</h4>
+              <ul>
+                <li>Arrives at gym</li>
+                <li>Decides what to work on</li>
+              </ul>
+            </section>
+            <section class="journey-stage-group">
+              <h4>Touchpoints</h4>
+              <ul class="journey-tag-list">
+                <li>Gym wall</li>
+                <li>Friends and staff</li>
+                <li>Phone notes or photos</li>
+              </ul>
+            </section>
+            <section class="journey-stage-group">
+              <h4>Thoughts</h4>
+              <blockquote class="journey-stage-quote">
+                <p>"What should I try today?"</p>
+                <p>"What did I struggle with last time?"</p>
+              </blockquote>
+            </section>
+            <section class="journey-stage-group">
+              <h4>Emotions</h4>
+              <p class="journey-emotion-pill">Motivated but uncertain</p>
+            </section>
+            <div class="journey-stage-callouts">
+              <section class="journey-callout tone-pain">
+                <h4>Pain Points</h4>
+                <ul>
+                  <li>No clear recall of previous routes, projects, or goals</li>
+                </ul>
+              </section>
+              <section class="journey-callout tone-opportunity">
+                <h4>Opportunities</h4>
+                <ul>
+                  <li>Quick pre-session summary</li>
+                  <li>Saved projects</li>
+                  <li>Suggested goals</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </article>
+
+        <article id="journey-stage-3" class="journey-stage-card stage-3 reveal reveal-delay-2" tabindex="-1">
+          <header class="journey-stage-card-head">
+            <span class="journey-stage-number">3</span>
+            <div>
+              <p class="journey-stage-label">Stage</p>
+              <h3>Climbing Session</h3>
+            </div>
+          </header>
+          <div class="journey-stage-card-body">
+            <section class="journey-stage-group">
+              <h4>User Actions</h4>
+              <ul>
+                <li>Attempts routes</li>
+                <li>Asks for help and observes others</li>
+                <li>Takes occasional photos</li>
+              </ul>
+            </section>
+            <section class="journey-stage-group">
+              <h4>Touchpoints</h4>
+              <ul class="journey-tag-list">
+                <li>Physical wall</li>
+                <li>Peers and coach</li>
+                <li>Phone camera</li>
+              </ul>
+            </section>
+            <section class="journey-stage-group">
+              <h4>Thoughts</h4>
+              <blockquote class="journey-stage-quote">
+                <p>"Am I improving?"</p>
+                <p>"Should I keep trying this?"</p>
+              </blockquote>
+            </section>
+            <section class="journey-stage-group">
+              <h4>Emotions</h4>
+              <p class="journey-emotion-pill">Engaged, challenged, sometimes frustrated</p>
+            </section>
+            <div class="journey-stage-callouts">
+              <section class="journey-callout tone-pain">
+                <h4>Pain Points</h4>
+                <ul>
+                  <li>Improvement feels invisible in the moment</li>
+                  <li>Asking others can feel awkward</li>
+                </ul>
+              </section>
+              <section class="journey-callout tone-opportunity">
+                <h4>Opportunities</h4>
+                <ul>
+                  <li>Lightweight logging</li>
+                  <li>Route notes</li>
+                  <li>Optional beta-sharing</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </article>
+
+        <article id="journey-stage-4" class="journey-stage-card stage-4 reveal" tabindex="-1">
+          <header class="journey-stage-card-head">
+            <span class="journey-stage-number">4</span>
+            <div>
+              <p class="journey-stage-label">Stage</p>
+              <h3>After the Session</h3>
+            </div>
+          </header>
+          <div class="journey-stage-card-body">
+            <section class="journey-stage-group">
+              <h4>User Actions</h4>
+              <ul>
+                <li>Leaves gym</li>
+                <li>Maybe posts a photo or message</li>
+                <li>Rarely logs systematically</li>
+              </ul>
+            </section>
+            <section class="journey-stage-group">
+              <h4>Touchpoints</h4>
+              <ul class="journey-tag-list">
+                <li>Social media</li>
+                <li>Notes app</li>
+                <li>Memory</li>
+              </ul>
+            </section>
+            <section class="journey-stage-group">
+              <h4>Thoughts</h4>
+              <blockquote class="journey-stage-quote">
+                <p>"That was fun, but I'll probably forget what I did."</p>
+              </blockquote>
+            </section>
+            <section class="journey-stage-group">
+              <h4>Emotions</h4>
+              <p class="journey-emotion-pill">Satisfied but inconsistent</p>
+            </section>
+            <div class="journey-stage-callouts">
+              <section class="journey-callout tone-pain">
+                <h4>Pain Points</h4>
+                <ul>
+                  <li>Session data is lost</li>
+                  <li>Achievements are not captured meaningfully</li>
+                </ul>
+              </section>
+              <section class="journey-callout tone-opportunity">
+                <h4>Opportunities</h4>
+                <ul>
+                  <li>One-tap post-session logging</li>
+                  <li>Milestone feedback</li>
+                  <li>Recap cards</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </article>
+
+        <article id="journey-stage-5" class="journey-stage-card stage-5 is-breakdown reveal reveal-delay-1" tabindex="-1">
+          <header class="journey-stage-card-head">
+            <span class="journey-stage-number">5</span>
+            <div>
+              <p class="journey-stage-label">Stage</p>
+              <h3>Between Sessions</h3>
+              <p class="journey-stage-flag">Key drop-off point</p>
+            </div>
+          </header>
+          <div class="journey-stage-card-body">
+            <section class="journey-stage-group">
+              <h4>User Actions</h4>
+              <ul>
+                <li>Tries to stay motivated</li>
+                <li>May not think much about climbing until next time</li>
+              </ul>
+            </section>
+            <section class="journey-stage-group">
+              <h4>Touchpoints</h4>
+              <ul class="journey-tag-list">
+                <li>Social feeds</li>
+                <li>Chat groups</li>
+                <li>Generic fitness apps</li>
+              </ul>
+            </section>
+            <section class="journey-stage-group">
+              <h4>Thoughts</h4>
+              <blockquote class="journey-stage-quote">
+                <p>"I want to keep going, but it's easy to lose momentum."</p>
+              </blockquote>
+            </section>
+            <section class="journey-stage-group">
+              <h4>Emotions</h4>
+              <p class="journey-emotion-pill">Motivated, then drifting</p>
+            </section>
+            <div class="journey-stage-callouts">
+              <section class="journey-callout tone-pain">
+                <h4>Pain Points</h4>
+                <ul>
+                  <li>Motivation drops between sessions</li>
+                  <li>No continuity</li>
+                </ul>
+              </section>
+              <section class="journey-callout tone-opportunity">
+                <h4>Opportunities</h4>
+                <ul>
+                  <li>Streaks</li>
+                  <li>Micro-goals</li>
+                  <li>Encouraging reminders</li>
+                  <li>Small challenges</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </article>
+
+        <article id="journey-stage-6" class="journey-stage-card stage-6 reveal reveal-delay-2" tabindex="-1">
+          <header class="journey-stage-card-head">
+            <span class="journey-stage-number">6</span>
+            <div>
+              <p class="journey-stage-label">Stage</p>
+              <h3>Rejoining Community</h3>
+            </div>
+          </header>
+          <div class="journey-stage-card-body">
+            <section class="journey-stage-group">
+              <h4>User Actions</h4>
+              <ul>
+                <li>Looks for next session, events, or people to climb with</li>
+              </ul>
+            </section>
+            <section class="journey-stage-group">
+              <h4>Touchpoints</h4>
+              <ul class="journey-tag-list">
+                <li>Gym announcements</li>
+                <li>Friends</li>
+                <li>Community channels</li>
+              </ul>
+            </section>
+            <section class="journey-stage-group">
+              <h4>Thoughts</h4>
+              <blockquote class="journey-stage-quote">
+                <p>"Who can I climb with next?"</p>
+                <p>"Is there something beginner-friendly?"</p>
+              </blockquote>
+            </section>
+            <section class="journey-stage-group">
+              <h4>Emotions</h4>
+              <p class="journey-emotion-pill">Hopeful, sometimes excluded</p>
+            </section>
+            <div class="journey-stage-callouts">
+              <section class="journey-callout tone-pain">
+                <h4>Pain Points</h4>
+                <ul>
+                  <li>Social connection depends on existing network</li>
+                  <li>Opportunities are fragmented</li>
+                </ul>
+              </section>
+              <section class="journey-callout tone-opportunity">
+                <h4>Opportunities</h4>
+                <ul>
+                  <li>Community hub</li>
+                  <li>Beginner tags</li>
+                  <li>Friend circles</li>
+                  <li>Small-group challenges</li>
+                </ul>
+              </section>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="journey-map-support">
+        <aside class="journey-insights reveal">
+          <span class="kicker">Key Insights</span>
+          <h3>The biggest breakdowns happen after the climb, not just during it</h3>
+          <div class="journey-insight-list">
+            <article class="journey-insight-item">
+              <h4>Progress invisibility</h4>
+              <p>Improvement is hard to see in the moment and easy to forget afterward, so growth does not feel reinforced.</p>
+            </article>
+            <article class="journey-insight-item">
+              <h4>Fragmented social connection</h4>
+              <p>Finding partners, events, and beginner-friendly opportunities depends too much on existing networks.</p>
+            </article>
+            <article class="journey-insight-item highlight">
+              <h4>Motivation drops between sessions</h4>
+              <p>The sharpest break in continuity happens once the session ends, when momentum fades and no clear loop brings the user back.</p>
+            </article>
+          </div>
+        </aside>
+
+        <div class="journey-chart reveal">
+          <div class="journey-chart-head">
+            <span class="kicker">Emotional Journey</span>
+            <h3>Energy rises during climbing, then dips most sharply between sessions</h3>
+          </div>
+          <div class="journey-chart-panel">
+            <svg viewBox="0 0 960 210" class="journey-chart-svg" aria-label="Emotional journey across six stages">
+              <defs>
+                <linearGradient id="journeyGradient" x1="90" y1="0" x2="890" y2="0" gradientUnits="userSpaceOnUse">
+                  <stop offset="0%" stop-color="#42c18d"></stop>
+                  <stop offset="20%" stop-color="#f7aa3b"></stop>
+                  <stop offset="40%" stop-color="#f06a6a"></stop>
+                  <stop offset="65%" stop-color="#4f8ff7"></stop>
+                  <stop offset="82%" stop-color="#8f68e4"></stop>
+                  <stop offset="100%" stop-color="#3ec2d3"></stop>
+                </linearGradient>
+              </defs>
+              <line x1="70" y1="105" x2="890" y2="105" class="chart-baseline"></line>
+              <polyline points="90,100 250,88 410,56 570,98 730,132 890,70" class="chart-path"></polyline>
+              <circle cx="90" cy="100" r="9" class="chart-dot chart-dot-1"></circle>
+              <circle cx="250" cy="88" r="9" class="chart-dot chart-dot-2"></circle>
+              <circle cx="410" cy="56" r="9" class="chart-dot chart-dot-3"></circle>
+              <circle cx="570" cy="98" r="9" class="chart-dot chart-dot-4"></circle>
+              <circle cx="730" cy="132" r="11" class="chart-dot chart-dot-5 chart-dot-breakdown"></circle>
+              <circle cx="890" cy="70" r="9" class="chart-dot chart-dot-6"></circle>
+            </svg>
+            <div class="journey-chart-labels">
+              <div><strong>Curious</strong><span>Planning</span></div>
+              <div><strong>Motivated</strong><span>Arrival</span></div>
+              <div><strong>Engaged</strong><span>Climbing</span></div>
+              <div><strong>Satisfied</strong><span>After session</span></div>
+              <div class="is-breakdown"><strong>Drifting</strong><span>Between sessions</span></div>
+              <div><strong>Hopeful</strong><span>Rejoining</span></div>
+            </div>
+            <p class="journey-chart-note">Users may enjoy climbing, yet still struggle to sustain participation because progress is hard to see, social opportunities are hard to discover, and motivation fades once the session ends.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="journey-reading-panel reveal">
+        <span class="kicker">Reading The Map</span>
+        <p>The most important themes revealed here are motivation, progress visibility, and social connectedness. A successful system should not simply digitise logging; it should connect these moments into a more continuous experience.</p>
+      </div>
     </section>
 
     <section class="section">
-      <div class="grid-3">
-        <div class="card reveal"><span class="kicker">Pain Point 01</span><h3>Route uncertainty</h3><p>Beginners often cannot read the route flow, which makes the first attempt feel confusing rather than exciting.</p></div>
-        <div class="card reveal"><span class="kicker">Pain Point 02</span><h3>Invisible progress</h3><p>Without small markers of growth, users may leave a session feeling like they only failed.</p></div>
-        <div class="card reveal"><span class="kicker">Pain Point 03</span><h3>Low social confidence</h3><p>Many users are more likely to return if they feel connected to people, tips, or a sense of community.</p></div>
+      <div class="highlight-panel reveal journey-link-panel">
+        <span class="kicker">Journey-to-Design Link</span>
+        <h2>From analysis to requirements</h2>
+        <p>The journey map directly informs the next-stage requirements. Pain points around fragmented planning suggest the need for partner-finding and event discovery. Pain points during and after climbing suggest the need for low-friction logging and clear progress summaries. Pain points between sessions suggest the need for playful motivational loops, such as milestones, streaks, or friendly challenges. Together, these opportunities create a strong bridge from journey analysis to concrete user, functional, and playful requirements.</p>
       </div>
     </section>
   </main>
