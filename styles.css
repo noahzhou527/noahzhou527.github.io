@@ -952,13 +952,121 @@ main,
   font-size: 0.84rem;
 }
 
+.persona-card {
+  margin-bottom: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg);
+  background: rgba(17, 24, 39, 0.82);
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  overflow: hidden;
+}
+
+.persona-card[open] {
+  box-shadow:
+    var(--shadow-strong),
+    0 0 0 1px rgba(230, 126, 34, 0.08);
+}
+
+.persona-card[open] .persona-summary {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.persona-summary {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.2rem;
+  align-items: center;
+  padding: 1.6rem 1.8rem;
+  cursor: pointer;
+  list-style: none;
+}
+
+.persona-summary::-webkit-details-marker {
+  display: none;
+}
+
+.persona-summary-copy h2 {
+  margin-bottom: 0.35rem;
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+}
+
+.persona-summary-quote {
+  margin-top: 1rem;
+  max-width: 58ch;
+}
+
+.persona-summary-quote h3 {
+  margin-bottom: 0.45rem;
+  color: var(--orange);
+  font-size: 0.92rem;
+  letter-spacing: 0.04em;
+  text-transform: none;
+}
+
+.persona-summary-quote blockquote {
+  color: var(--text-light);
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.65;
+}
+
+.persona-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 154px;
+  padding: 0.9rem 1.15rem;
+  border-radius: 999px;
+  border: 1px solid rgba(230, 126, 34, 0.24);
+  background: rgba(230, 126, 34, 0.1);
+  color: var(--orange);
+  font-family: 'Montserrat', Arial, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.persona-card[open] .persona-toggle {
+  background: rgba(59, 130, 246, 0.12);
+  border-color: rgba(59, 130, 246, 0.22);
+  color: #93c5fd;
+}
+
+.persona-summary:hover .persona-toggle,
+.persona-summary:focus-visible .persona-toggle {
+  transform: translateY(-2px);
+  border-color: rgba(230, 126, 34, 0.34);
+  background: rgba(230, 126, 34, 0.14);
+}
+
 .persona-wrap {
   display: grid;
-  grid-template-columns: 400px minmax(0, 1fr);
+  grid-template-columns: 380px minmax(0, 1fr);
   gap: 18px;
-  align-items: stretch;
-  margin-bottom: 28px;
+  align-items: start;
   border-radius: var(--radius-md);
+}
+
+.persona-aside {
+  display: grid;
+  gap: 16px;
+  align-self: start;
+}
+
+.persona-side-stack {
+  display: grid;
+  gap: 16px;
+}
+
+.persona-details {
+  padding: 0 1.8rem 1.8rem;
 }
 
 .persona-side,
@@ -968,12 +1076,16 @@ main,
 
 .persona-side {
   position: relative;
+  width: 100%;
+  align-self: start;
   overflow: hidden;
   background: var(--dark2);
+  aspect-ratio: 4 / 5;
+  min-height: 475px;
 }
 
 .persona-side img {
-  min-height: 420px;
+  min-height: 0;
 }
 
 .persona-side::after {
@@ -1014,6 +1126,43 @@ main,
   padding: 18px;
 }
 
+.persona-card .persona-wrap,
+.persona-card .persona-box {
+  transition:
+    border-color 0.28s ease,
+    box-shadow 0.28s ease,
+    background-color 0.28s ease,
+    transform 0.28s ease;
+}
+
+.persona-card .persona-wrap:hover {
+  transform: none;
+  border-color: var(--card-border);
+  box-shadow: none;
+}
+
+.persona-card .persona-wrap:hover::before {
+  opacity: 0;
+}
+
+.persona-card .persona-box:hover {
+  transform: translateY(-2px);
+  border-color: rgba(230, 126, 34, 0.2);
+  background: rgba(255, 255, 255, 0.045);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.14);
+}
+
+.persona-card .persona-aside .persona-box:hover {
+  transform: none;
+  border-color: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.03);
+  box-shadow: none;
+}
+
+.persona-box p {
+  color: var(--text-muted);
+}
+
 .persona-box h3 {
   margin-bottom: 10px;
   color: var(--orange);
@@ -1022,6 +1171,18 @@ main,
 
 .persona-box.full {
   grid-column: 1 / -1;
+}
+
+.persona-quote {
+  padding: 22px 24px;
+  background: linear-gradient(135deg, rgba(230, 126, 34, 0.14), rgba(59, 130, 246, 0.08));
+}
+
+.persona-quote blockquote {
+  color: var(--text-light);
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.7;
 }
 
 .journey-table {
@@ -1727,11 +1888,28 @@ main,
   }
 
   .highlight-box,
-  .persona-wrap,
   .grid-2,
-  .persona-grid,
   .journey-hero {
     grid-template-columns: 1fr;
+  }
+
+  .persona-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .persona-aside {
+    max-width: 420px;
+    width: 100%;
+    justify-self: center;
+  }
+
+  .persona-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .persona-summary {
+    grid-template-columns: 1fr;
+    align-items: start;
   }
 
   .journey-map-header,
@@ -1758,7 +1936,7 @@ main,
   }
 
   .persona-side img {
-    min-height: 320px;
+    min-height: 0;
   }
 }
 
@@ -1830,6 +2008,29 @@ main,
 
   .page-hero-compact h1 {
     font-size: clamp(1.9rem, 8.4vw, 3rem);
+  }
+
+  .persona-main {
+    padding: 22px;
+  }
+
+  .persona-summary,
+  .persona-details {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  .persona-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .persona-toggle {
+    min-width: 0;
+    width: fit-content;
+  }
+
+  .persona-side {
+    min-height: 360px;
   }
 
   .journey-brief {
@@ -1912,6 +2113,18 @@ main,
 
   .stat-grid {
     grid-template-columns: 1fr;
+  }
+
+  .persona-side {
+    min-height: 320px;
+  }
+
+  .persona-summary-copy h2 {
+    font-size: 1.8rem;
+  }
+
+  .persona-summary-quote blockquote {
+    font-size: 1rem;
   }
 
   .journey-chart-labels {

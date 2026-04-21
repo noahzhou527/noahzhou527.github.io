@@ -92,6 +92,23 @@ function applyRevealStagger() {
   });
 }
 
+function setupPersonaCards() {
+  document.querySelectorAll('.persona-card').forEach((card) => {
+    const toggle = card.querySelector('.persona-toggle');
+
+    if (!toggle) {
+      return;
+    }
+
+    const syncLabel = () => {
+      toggle.textContent = card.open ? 'Hide Details' : 'View Details';
+    };
+
+    syncLabel();
+    card.addEventListener('toggle', syncLabel);
+  });
+}
+
 function setupReveal() {
   const revealElements = [...document.querySelectorAll('.reveal')];
 
@@ -297,6 +314,7 @@ function setupGlowParallax() {
 setupScrollIndicator();
 setupSmoothScroll();
 applyRevealStagger();
+setupPersonaCards();
 setupReveal();
 setupParticles();
 setupGlowParallax();
