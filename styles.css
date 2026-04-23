@@ -1255,10 +1255,10 @@ main,
 
 .journey-map-header {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(320px, 420px);
-  gap: 2.5rem;
-  align-items: end;
-  padding: 1.8rem 2rem;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  align-items: start;
+  padding: 1.35rem;
 }
 
 .journey-map-header h2,
@@ -1267,24 +1267,52 @@ main,
   color: var(--text-light);
 }
 
-.journey-map-header-copy {
-  max-width: 760px;
+.journey-map-preview {
+  position: relative;
+  margin: 0;
+  padding: 1rem;
+  border-radius: 36px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03)),
+    linear-gradient(135deg, rgba(230, 126, 34, 0.12), rgba(255, 255, 255, 0.03));
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 20px 48px rgba(0, 0, 0, 0.24),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  overflow: hidden;
 }
 
-.journey-map-header h2 {
-  margin-top: 0.3rem;
-  font-size: clamp(2rem, 4vw, 3.1rem);
-  line-height: 1.04;
-  max-width: 17ch;
-  text-wrap: balance;
+.journey-map-preview img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 28px;
+  clip-path: inset(0 round 28px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(10, 14, 23, 0.8);
+  box-shadow: 0 16px 34px rgba(10, 14, 23, 0.18);
 }
 
 .journey-map-header-summary {
   font-size: 1rem;
-  max-width: 30ch;
+  max-width: 64ch;
   line-height: 1.7;
-  justify-self: end;
-  align-self: center;
+  margin: 0;
+  padding: 0 0.35rem 0.15rem;
+  justify-self: start;
+  align-self: start;
+}
+
+.motivation-panel {
+  max-width: none;
+}
+
+.motivation-panel p {
+  color: var(--text-light);
+}
+
+.motivation-panel p + p {
+  margin-top: 1rem;
 }
 
 .journey-stage-nav {

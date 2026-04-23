@@ -1,4 +1,4 @@
-# CRAG website structure
+# rockbond website structure
 
 Copy these files into the root of your GitHub Pages repo:
 
