@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -26,10 +26,13 @@
         <a href="#stakeholders">3. Stakeholders & Personas</a>
         <a href="#user-research">4. User Research</a>
         <a href="#journey-map">5. Journey Map</a>
-        <a href="#ideation">6. Ideation</a>
-        <a href="#implementation">7. Implementation</a>
-        <a href="#evaluation">8. Evaluation</a>
+        <a href="#requirements">6. Requirements</a>
+        <a href="#ideation-process">7. Ideation Process</a>
+        <a href="#crazy-eights">8. Crazy Eights</a>
+        <a href="#design-alternatives">9. Design Alternatives</a>
+        <a href="#prototypes">10-11. Prototypes</a>
         <a href="#references">References</a>
+        <a href="#appendices">Appendices</a>
       </div>
     </div>
   </nav>
@@ -39,10 +42,10 @@
       <div class="reveal">
         <div class="hero-badge"><span class="dot"></span> CPT208 Human-Centric Computing</div>
         <h1>Built for the <span class="accent">Vertical</span> World</h1>
-        <p>Rockbond is a playful climbing journey ecosystem that connects personal progress tracking, session memory, and low-pressure social motivation into one continuous climbing experience.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#implementation">Explore Features</a>
-          <a class="btn btn-secondary" href="#stakeholders">Meet the Users</a>
+        <p>Our project is a playful web-based climbing community experience that helps climbers discover routes, record progress, and stay socially motivated.</p>
+        <div class="hero-meta">
+          <span>Group ID: C2-5</span>
+          <span>Topic: Go Climbers</span>
         </div>
       </div>
     </section>
@@ -438,133 +441,597 @@
       </figure>
     </section>
 
-    <section id="ideation" class="section container flow-section">
+    <section id="requirements" class="section container flow-section">
       <div class="section-head reveal">
         <div>
-          <span class="eyebrow">6. Ideation & Alternatives</span>
-          <h2>From Crazy Eights to a focused concept</h2>
+          <span class="eyebrow">6. User Requirements</span>
+          <h2>Turning research insights into design requirements</h2>
         </div>
-        <p>We used rapid ideation to explore a wide range of climbing app directions, then narrowed them down using user pain points, supportive playfulness, social value, and mobile-first feasibility.</p>
+        <p>The requirements translate journey-map pain points, persona needs, and product gaps into a focused mobile-first climbing companion for progress, memory, and community motivation.</p>
       </div>
 
-      <div class="grid-3">
-        <article class="card reveal ideation-theme"><span class="kicker">Theme 01</span><h3>Guided Progress Quests</h3><p>Lightweight quests help climbers notice progress across sessions and stay motivated after inconsistent weeks.</p></article>
-        <article class="card reveal ideation-theme"><span class="kicker">Theme 02</span><h3>Climb Circles for Small-Group Motivation</h3><p>Small circles make it easier to coordinate climbs, share updates, and keep social energy alive between sessions.</p></article>
-        <article class="card reveal ideation-theme"><span class="kicker">Theme 03</span><h3>Exploration-Based Community Discovery</h3><p>Map-style rewards encourage users to discover beginner sessions, events, new gyms, and new climbing partners.</p></article>
-        <article class="card reveal ideation-theme"><span class="kicker">Theme 04</span><h3>Quick Session Memory and Route Recall</h3><p>Quick saving of routes, photos, and notes helps each session connect to the next without heavy manual logging.</p></article>
-        <article class="card reveal ideation-theme"><span class="kicker">Theme 05</span><h3>Beginner-Friendly Confidence Support</h3><p>Low-pressure prompts and small-wins feedback reduce intimidation and help new climbers feel included.</p></article>
-        <article class="card reveal ideation-theme"><span class="kicker">Theme 06</span><h3>Social Check-In and Achievement Sharing</h3><p>Lightweight post-session sharing supports reflection and recognition without turning the app into a full social feed.</p></article>
+      <div class="highlight-panel reveal requirements-intro">
+        <span class="kicker">6.1 Requirement Derivation</span>
+        <h2>Users need continuity before, during, and after climbing</h2>
+        <div class="requirements-list columns-2">
+          <ul>
+            <li>Users need a simple way to see their climbing progress over time.</li>
+            <li>Users need to remember routes, projects, and recent sessions without heavy manual effort.</li>
+            <li>Users need easier ways to find climbing partners, social sessions, and relevant events.</li>
+            <li>Beginner users need a product that feels welcoming, low-pressure, and confidence-building.</li>
+          </ul>
+          <ul>
+            <li>Regular users need features that help them maintain momentum between sessions.</li>
+            <li>Users need playful experiences that feel motivating and meaningful, rather than purely competitive.</li>
+            <li>Users need a mobile experience that fits naturally into before-, during-, and after-session use.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="requirements-grid requirements-grid-single" style="margin-top: 1.5rem;">
+        <article class="card reveal">
+          <span class="kicker">6.2 Functional Requirements</span>
+          <h3>What the system shall support</h3>
+          <ol class="requirements-ordered">
+            <li>The system shall allow users to log climbs or sessions quickly on mobile.</li>
+            <li>The system shall provide a personal progress view showing recent activity, milestones, and trends.</li>
+            <li>The system shall allow users to save projects, notes, or route memories for later sessions.</li>
+            <li>The system shall provide partner-finding or session coordination features.</li>
+            <li>The system shall display events, beginner-friendly sessions, or community opportunities.</li>
+            <li>The system shall support lightweight social interaction, such as sharing achievements, joining small groups, or reacting to friends' activity.</li>
+            <li>The system shall support optional challenge participation, rather than forcing all users into competitive modes.</li>
+            <li>The system shall work effectively in a mobile-first usage context.</li>
+          </ol>
+        </article>
       </div>
 
       <div class="section-head reveal" style="margin-top: 4rem;">
         <div>
-          <span class="eyebrow">Crazy Eights</span>
-          <h2>Early prototype sketches</h2>
+          <span class="eyebrow">6.3 Must-Have Playful Features</span>
+          <h2>Three playful features anchor the concept</h2>
         </div>
-        <p>After brainstorming the initial idea themes and defining the selection logic, we translated the most promising directions into quick Crazy Eights sketches to explore possible screens, flows, and feature combinations.</p>
+        <p>The playful layer is designed to support self-efficacy, social motivation, and community discovery without relying on broad public competition.</p>
       </div>
-      <div class="grid-2">
-        <figure class="card ideation-sketch reveal">
-          <img src="./image/crazy_eights1.jpg" alt="Crazy Eights sketch sheet showing smart onboarding, a progress hub, route logging with memory support, and a friendly micro-challenge board.">
-          <figcaption>Sketch set 01 explored smart onboarding, a home progress hub, route logging with memory support, and a friendly micro-challenge board.</figcaption>
+      <div class="grid-3 requirements-play-grid">
+        <article class="card feature-card reveal">
+          <span class="kicker">Must-Have 01</span>
+          <h3>Session-to-Session Progress Quest</h3>
+          <p>Users receive a visual quest layer that transforms personal climbing goals into small achievable milestones, such as completing 3 routes above last week's comfort grade or returning to one saved project and improving attempt quality.</p>
+          <p><strong>Why must-have:</strong> Directly supports progress visibility and self-efficacy.</p>
+          <p><strong>Implementation value:</strong> Concrete and mobile-friendly.</p>
+        </article>
+        <article class="card feature-card reveal">
+          <span class="kicker">Must-Have 02</span>
+          <h3>Climb Circles and Friendly Micro-Challenges</h3>
+          <p>Users can create or join small friend groups for time-limited challenges, such as 2 sessions this week, completing a beginner route set together, or sharing one beta tip.</p>
+          <p><strong>Why must-have:</strong> Adds social motivation without relying on public leaderboards.</p>
+          <p><strong>Implementation value:</strong> Strongly aligned with community needs.</p>
+        </article>
+        <article class="card feature-card reveal">
+          <span class="kicker">Must-Have 03</span>
+          <h3>Exploration and Community Discovery Badges</h3>
+          <p>Users unlock lightweight badges or map-style markers for exploration behaviours such as attending a new gym event, joining a beginner session, climbing with a new partner, or trying a new wall area.</p>
+          <p><strong>Why must-have:</strong> Connects playfulness to community participation, not only performance.</p>
+          <p><strong>Implementation value:</strong> Encourages broader engagement and discovery.</p>
+        </article>
+      </div>
+
+      <div class="requirements-grid requirements-grid-single" style="margin-top: 1.5rem;">
+        <article class="card reveal">
+          <span class="kicker">6.4 UX Requirements</span>
+          <h3>How the experience should feel</h3>
+          <ul>
+            <li>The interface should support low-friction input so that logging a session takes minimal time.</li>
+            <li>The system should present progress in a clear and encouraging way, avoiding information overload.</li>
+            <li>The product should feel inclusive and beginner-friendly, not optimised only for advanced climbers.</li>
+            <li>Social features should be opt-in and privacy-aware, with small-group or friend-based interaction preferred over forced public exposure.</li>
+            <li>Feedback should be immediate and understandable, especially after logging or completing a milestone.</li>
+            <li>The design should be mobile-first and responsive, matching the course's device direction for this topic.</li>
+            <li>Playful elements should remain supportive rather than pressuring, especially for early-stage users.</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="section-head reveal" style="margin-top: 4rem;">
+        <div>
+          <span class="eyebrow">6.5 Requirements Rationale</span>
+          <h2>Why these requirements matter</h2>
+        </div>
+        <p>Each requirement is traceable to an evidence source from the research, product review, persona work, or journey analysis.</p>
+      </div>
+      <div class="requirements-table-wrap reveal">
+        <table class="requirements-table">
+          <thead>
+            <tr>
+              <th>Requirement</th>
+              <th>Rationale / evidence source</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Requirement">Quick climb / session logging</td>
+              <td data-label="Rationale / evidence source">Product gap: many users still rely on photos or notes; personas show low-friction capture is essential; journey pain point appears after sessions.</td>
+            </tr>
+            <tr>
+              <td data-label="Requirement">Personal progress view</td>
+              <td data-label="Rationale / evidence source">Literature on self-efficacy and motivation; beginner persona pain point; journey pain point during and after sessions.</td>
+            </tr>
+            <tr>
+              <td data-label="Requirement">Save projects and notes</td>
+              <td data-label="Rationale / evidence source">Journey stage 2 and 4 show memory fragmentation; progression-oriented persona needs continuity.</td>
+            </tr>
+            <tr>
+              <td data-label="Requirement">Partner-finding / session coordination</td>
+              <td data-label="Rationale / evidence source">Product review of ClimbTime; social support findings in fitness app literature; journey stage 1 and 6.</td>
+            </tr>
+            <tr>
+              <td data-label="Requirement">Event / opportunity discovery</td>
+              <td data-label="Rationale / evidence source">Stakeholder and journey analysis show fragmented access to community participation; product gap across reviewed systems.</td>
+            </tr>
+            <tr>
+              <td data-label="Requirement">Friendly small-group challenges</td>
+              <td data-label="Rationale / evidence source">Gamification literature supports activity engagement; product insight from Strava; avoids the downsides of broad public comparison.</td>
+            </tr>
+            <tr>
+              <td data-label="Requirement">Exploration / community badges</td>
+              <td data-label="Rationale / evidence source">Supports discovery, belonging, and playful engagement without over-focusing on hard grades; addresses market gap.</td>
+            </tr>
+            <tr>
+              <td data-label="Requirement">Inclusive beginner-friendly framing</td>
+              <td data-label="Rationale / evidence source">EDI climbing study and beginner persona both indicate intimidation and participation barriers matter.</td>
+            </tr>
+            <tr>
+              <td data-label="Requirement">Optional social visibility and comparison</td>
+              <td data-label="Rationale / evidence source">Fitness-app literature shows social comparison can motivate, but effects vary; public competition can discourage some users.</td>
+            </tr>
+            <tr>
+              <td data-label="Requirement">Mobile-first interface</td>
+              <td data-label="Rationale / evidence source">Directly aligned with course topic/device framing and real use context before, during, and after sessions.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="highlight-panel reveal requirements-rationale" style="margin-top: 1.5rem;">
+        <span class="kicker">Short Rationale</span>
+        <h2>Clear progress, sustained motivation, and social connection</h2>
+        <p>These requirements respond directly to the gaps identified earlier. Rather than designing a generic fitness app or a specialist climbing database, the system is positioned to support the everyday climbing journey through three linked values: clear progress, sustained motivation, and social connection. The playful layer is not treated as decoration; it is used as a mechanism for helping users participate more consistently and meaningfully.</p>
+      </div>
+
+      <div class="section-head reveal" style="margin-top: 4rem;">
+        <div>
+          <span class="eyebrow">6.6 Prioritised List</span>
+          <h2>Must, Should, and Could priorities</h2>
+        </div>
+        <p>The priority list keeps the prototype focused on the core climbing journey while leaving room for later expansion.</p>
+      </div>
+      <div class="grid-3 requirements-priority-grid">
+        <article class="card reveal priority-card">
+          <span class="kicker">Must</span>
+          <ul>
+            <li>Quick mobile session logging</li>
+            <li>Personal progress dashboard</li>
+            <li>Saved projects / session memory</li>
+            <li>Partner-finding or session coordination</li>
+            <li>Event / opportunity discovery</li>
+            <li>Session-to-Session Progress Quest</li>
+            <li>Climb Circles and Friendly Micro-Challenges</li>
+            <li>Exploration and Community Discovery Badges</li>
+            <li>Inclusive beginner-friendly UX</li>
+          </ul>
+        </article>
+        <article class="card reveal priority-card">
+          <span class="kicker">Should</span>
+          <ul>
+            <li>Lightweight achievement sharing</li>
+            <li>Beta / route advice sharing in small groups</li>
+            <li>Optional reminders and motivation prompts</li>
+            <li>Personalised suggestions based on recent activity</li>
+            <li>Beginner tags or onboarding pathways</li>
+          </ul>
+        </article>
+        <article class="card reveal priority-card">
+          <span class="kicker">Could</span>
+          <ul>
+            <li>Seasonal challenge campaigns</li>
+            <li>Coach / organiser tools for themed sessions</li>
+            <li>Gym-based exploration maps</li>
+            <li>Deeper analytics for regular users</li>
+            <li>Wearable or sensor integration later</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="ideation-process" class="section container flow-section">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">7. Ideation Process</span>
+          <h2>Exploring possible playful climbing concepts</h2>
+        </div>
+        <p>The ideation process used brainstorming, theme grouping, and selection criteria to move from broad opportunities into a focused set of concepts that match user pain points and mobile-first feasibility.</p>
+      </div>
+
+      <div class="section-head reveal" style="margin-top: 1rem;">
+        <div>
+          <span class="eyebrow">7.1 Brainstorming Approach</span>
+          <h2>Sketching ideas from research insights</h2>
+        </div>
+        <p>The brainstorming stage explored multiple routes from the same evidence base: progress visibility, session memory, social coordination, beginner confidence, and supportive playful motivation.</p>
+      </div>
+      <div class="grid-2 brainstorming-grid">
+        <figure class="card brainstorming-card reveal">
+          <img src="./image/brainstorming1.jpg" alt="Brainstorming sheet exploring climbing app ideas and feature opportunities.">
+          <figcaption>Brainstorming sheet 01 explored early feature directions from user pain points and playful motivation opportunities.</figcaption>
         </figure>
-        <figure class="card ideation-sketch reveal">
-          <img src="./image/crazy_eights2.jpg" alt="Crazy Eights sketch sheet showing partner finding, gym and event discovery, social check-ins, and a profile and achievement journey.">
-          <figcaption>Sketch set 02 explored partner finding, gym and event discovery, social check-ins, and a profile-based achievement journey.</figcaption>
+        <figure class="card brainstorming-card reveal">
+          <img src="./image/brainstorming2.jpg" alt="Brainstorming sheet showing additional climbing app concept ideas and grouping.">
+          <figcaption>Brainstorming sheet 02 grouped ideas around progress, community, exploration, and low-pressure social participation.</figcaption>
         </figure>
       </div>
 
       <div class="section-head reveal" style="margin-top: 4rem;">
         <div>
-          <span class="eyebrow">Alternative Designs</span>
-          <h2>Three concept directions were compared</h2>
+          <span class="eyebrow">7.2 Initial Idea Themes</span>
+          <h2>Six themes shaped the concept direction</h2>
         </div>
-        <p>After reviewing the six themes, we grouped them into three broader design alternatives and assessed which one offered the strongest balance of value, distinctiveness, and feasibility.</p>
+        <p>Each theme was checked against a concrete pain point and a playful requirement so that ideation stayed connected to the research rather than becoming feature decoration.</p>
       </div>
-      <div class="grid-3 selection-summary">
-        <article class="card reveal"><span class="kicker">Alternative 01</span><h3>Social Matching First</h3><p>This concept prioritises social connection as the main entry point, helping users find partners, join sessions, and explore events before anything else.</p><p>It directly addresses fragmented community coordination and lowers the barrier for beginners, but risks becoming a simple coordination tool with weaker long-term value if users do not keep using the social features consistently.</p></article>
-        <article class="card reveal"><span class="kicker">Alternative 02</span><h3>Progress Tracking First</h3><p>This approach centres on personal logging, project tracking, performance review, and goal-based prompts or quests.</p><p>It matches a highly consistent user need and is easier to prototype, but it risks feeling too similar to existing tracking tools and can become an isolated experience without carefully integrated social value.</p></article>
-        <article class="card reveal"><span class="kicker">Alternative 03</span><h3>Hybrid Progress + Community Motivation</h3><p>This concept combines session logging and personal improvement with small-group circles, event discovery, and partner-finding.</p><p>It is the most well-rounded and distinctive option because it supports progress, motivation, and social connection at the same time, although it requires careful scoping to avoid interface complexity.</p></article>
+      <div class="grid-3 ideation-theme-grid">
+        <article class="card reveal ideation-theme">
+          <span class="kicker">Theme 1</span>
+          <h3>Guided Progress Quests</h3>
+          <p>A lightweight quest system turns personal climbing goals into small, achievable session-based tasks that help users notice improvement over time.</p>
+          <div class="idea-meta"><strong>Addresses pain point:</strong><p>Hard to see progress over time; low motivation after inconsistent sessions.</p></div>
+          <div class="idea-meta"><strong>Supports playful requirement:</strong><p>Session-to-Session Progress Quest.</p></div>
+        </article>
+        <article class="card reveal ideation-theme">
+          <span class="kicker">Theme 2</span>
+          <h3>Climb Circles for Small-Group Motivation</h3>
+          <p>Users join or create small circles with friends or partners to coordinate sessions, share updates, and complete friendly micro-challenges together.</p>
+          <div class="idea-meta"><strong>Addresses pain point:</strong><p>Hard to find people to climb with; social energy disappears between sessions.</p></div>
+          <div class="idea-meta"><strong>Supports playful requirement:</strong><p>Climb Circles and Friendly Micro-Challenges.</p></div>
+        </article>
+        <article class="card reveal ideation-theme">
+          <span class="kicker">Theme 3</span>
+          <h3>Exploration-Based Community Discovery</h3>
+          <p>The system rewards users for discovering beginner sessions, new gyms, events, or new climbing partners through map-style markers and community badges.</p>
+          <div class="idea-meta"><strong>Addresses pain point:</strong><p>Hard to discover opportunities to climb; difficulty rejoining the community after inactive periods.</p></div>
+          <div class="idea-meta"><strong>Supports playful requirement:</strong><p>Exploration and Community Discovery Badges.</p></div>
+        </article>
+        <article class="card reveal ideation-theme">
+          <span class="kicker">Theme 4</span>
+          <h3>Quick Session Memory and Route Recall</h3>
+          <p>Users can quickly save routes, projects, photos, and short notes so that each climbing session connects to the next one without heavy manual tracking.</p>
+          <div class="idea-meta"><strong>Addresses pain point:</strong><p>Users forget what they climbed last time; current tracking is fragmented.</p></div>
+          <div class="idea-meta"><strong>Supports playful requirement:</strong><p>Encouraging progress feedback and continuity across sessions.</p></div>
+        </article>
+        <article class="card reveal ideation-theme">
+          <span class="kicker">Theme 5</span>
+          <h3>Beginner-Friendly Confidence Support</h3>
+          <p>The system presents low-pressure prompts, beginner tags, supportive summaries, and small-wins feedback to reduce intimidation and help new climbers feel included.</p>
+          <div class="idea-meta"><strong>Addresses pain point:</strong><p>Beginners feel awkward, left behind, or unsure whether they are improving.</p></div>
+          <div class="idea-meta"><strong>Supports playful requirement:</strong><p>Supportive feedback rather than pressure-based competition.</p></div>
+        </article>
+        <article class="card reveal ideation-theme">
+          <span class="kicker">Theme 6</span>
+          <h3>Social Check-In and Achievement Sharing</h3>
+          <p>After a session, users can post a lightweight check-in, share one achievement, or ask for route advice without needing a full social-media style feed.</p>
+          <div class="idea-meta"><strong>Addresses pain point:</strong><p>Fragmented post-session reflection; weak social continuity after climbing.</p></div>
+          <div class="idea-meta"><strong>Supports playful requirement:</strong><p>Low-pressure recognition, sharing, and community interaction.</p></div>
+        </article>
       </div>
 
       <div class="highlight-panel reveal selection-panel" style="margin-top: 1.5rem;">
-        <span class="kicker">Chosen Design</span>
-        <h2>Hybrid progress and low-pressure community motivation</h2>
-        <p>The chosen design follows a hybrid model that combines personal progress tracking with low-pressure community motivation. This decision is grounded in our research findings, which show that users want to improve consistently, stay motivated between sessions, and maintain social connection without being pushed into competitive or high-pressure environments.</p>
-        <p>Compared to the alternatives, the hybrid approach offers a more balanced and sustainable experience. A purely social-first system risks becoming a coordination tool with limited long-term engagement, while a progress-first system may feel isolated and lack social reinforcement. The hybrid model addresses both limitations by integrating quick session logging, progress feedback, Climb Circles, and exploration-based discovery into one unified flow.</p>
+        <span class="kicker">7.3 Selection Logic</span>
+        <h2>Filtering ideas through user value and feasibility</h2>
+        <p>The six initial plans were assessed against criteria that balance user relevance, inclusive playful experience, social value, mobile-first feasibility, and prototype clarity.</p>
+        <div class="selection-criteria">
+          <span>Relevance to core user pain points</span>
+          <span>Support for supportive, non-intimidating playfulness</span>
+          <span>Social and community value</span>
+          <span>Technical feasibility for a mobile-first web app</span>
+          <span>Clarity and testability in low-fi prototype form</span>
+        </div>
       </div>
     </section>
 
-    <section id="implementation" class="section container flow-section">
+    <section id="crazy-eights" class="section container flow-section">
       <div class="section-head reveal">
         <div>
-          <span class="eyebrow">7. Technical Implementation</span>
-          <h2>Core features for a guided, playful, and social climbing journey</h2>
+          <span class="eyebrow">8. Crazy Eights</span>
+          <h2>Eight sketch concepts for the climbing app</h2>
         </div>
-        <p>The concept is built around three core layers: Guided Progress Quests, Climb Circles, and Exploration-Based Discovery. Together they turn isolated sessions into a connected climbing experience.</p>
+        <p>The Crazy Eights exercise translated the strongest ideation themes into fast screen concepts, helping us compare onboarding, progress, social coordination, discovery, logging, challenges, sharing, and achievement journeys.</p>
       </div>
 
-      <div class="grid-3">
-        <article class="card feature-card reveal">
-          <span class="kicker">Feature 01</span>
-          <h3>Guided Progress Quests</h3>
-          <p>Turns personal climbing goals into small, achievable milestones so each session feels like part of a meaningful progression loop.</p>
-          <ul><li>Complete quests such as climbing 3 routes above last week's comfort grade</li><li>Revisit saved projects and improve attempt quality over time</li><li>Supports self-efficacy through concrete, trackable progress markers</li></ul>
+      <div class="grid-2 brainstorming-grid">
+        <figure class="card brainstorming-card reveal">
+          <img src="./image/crazy_eights1.jpg" alt="Crazy Eights sketch sheet showing smart onboarding, a progress hub, route logging with memory support, and a friendly micro-challenge board.">
+          <figcaption>Crazy Eights sheet 01 explores onboarding, a progress hub, route logging, and a friendly micro-challenge board.</figcaption>
+        </figure>
+        <figure class="card brainstorming-card reveal">
+          <img src="./image/crazy_eights2.jpg" alt="Crazy Eights sketch sheet showing partner finding, gym and event discovery, social check-ins, and a profile and achievement journey.">
+          <figcaption>Crazy Eights sheet 02 explores partner finding, gym and event discovery, social check-ins, and a profile and achievement journey.</figcaption>
+        </figure>
+      </div>
+
+      <div class="section-head reveal" style="margin-top: 4rem;">
+        <div>
+          <span class="eyebrow">Eight Sketch Concepts</span>
+          <h2>From rough sketches to screen directions</h2>
+        </div>
+        <p>Each sketch focused on a specific user moment and tested whether the idea could become a clear, mobile-first screen.</p>
+      </div>
+      <div class="grid-2 sketch-grid">
+        <article class="card reveal sketch-card">
+          <span class="kicker">Sketch 1</span>
+          <h3>Smart Onboarding Path</h3>
+          <ul>
+            <li><strong>Focus:</strong> onboarding / first-time setup</li>
+            <li><strong>Main feature shown:</strong> choose skill level, goals, preferred climbing style, and desired social mode</li>
+            <li><strong>Responds to:</strong> beginner intimidation; need for personalisation and welcoming entry</li>
+          </ul>
+          <p>This sketch explores how onboarding could personalise the app for beginners, regular climbers, and socially motivated users from the first screen.</p>
         </article>
-        <article class="card feature-card reveal">
-          <span class="kicker">Feature 02</span>
-          <h3>Climb Circles</h3>
-          <p>Lets users create or join small friend groups for short, motivating challenges without the pressure of public competition.</p>
-          <ul><li>Set goals like 2 sessions this week or finish a beginner route set together</li><li>Share small contributions such as one beta tip or one completed challenge</li><li>Adds social motivation without relying on public leaderboards</li></ul>
+        <article class="card reveal sketch-card">
+          <span class="kicker">Sketch 2</span>
+          <h3>Home as Progress Hub</h3>
+          <ul>
+            <li><strong>Focus:</strong> home dashboard</li>
+            <li><strong>Main feature shown:</strong> recent session summary, current quest, next suggested action, and quick log button</li>
+            <li><strong>Responds to:</strong> poor progress visibility; weak continuity between sessions</li>
+          </ul>
+          <p>This sketch treats the home page as a simple progress centre that keeps users motivated between climbing sessions.</p>
         </article>
-        <article class="card feature-card reveal">
-          <span class="kicker">Feature 03</span>
-          <h3>Exploration-Based Discovery</h3>
-          <p>Rewards exploration behaviours so playfulness is tied to participation, discovery, and community involvement instead of only performance.</p>
-          <ul><li>Unlock badges for joining a beginner session or attending a new gym event</li><li>Earn map-style markers for climbing with new partners or trying new wall areas</li><li>Encourages broader engagement across the climbing community</li></ul>
+        <article class="card reveal sketch-card">
+          <span class="kicker">Sketch 3</span>
+          <h3>Find a Climbing Partner</h3>
+          <ul>
+            <li><strong>Focus:</strong> partner-finding / session coordination</li>
+            <li><strong>Main feature shown:</strong> filters for location, skill level, availability, and beginner-friendly tags</li>
+            <li><strong>Responds to:</strong> hard to find people to climb with; awkwardness in asking others</li>
+          </ul>
+          <p>This sketch shows a low-pressure matching flow for users who want climbing partners without joining a large public feed.</p>
+        </article>
+        <article class="card reveal sketch-card">
+          <span class="kicker">Sketch 4</span>
+          <h3>Gym and Event Discovery</h3>
+          <ul>
+            <li><strong>Focus:</strong> event / gym exploration screen</li>
+            <li><strong>Main feature shown:</strong> upcoming events, beginner sessions, new gyms, and exploration badges</li>
+            <li><strong>Responds to:</strong> hard to discover climbing opportunities; limited community visibility</li>
+          </ul>
+          <p>This sketch explores how discovery features could connect community participation with playful exploration rewards.</p>
+        </article>
+        <article class="card reveal sketch-card">
+          <span class="kicker">Sketch 5</span>
+          <h3>Route Log with Memory Support</h3>
+          <ul>
+            <li><strong>Focus:</strong> quick logging screen</li>
+            <li><strong>Main feature shown:</strong> route photo, attempt result, notes, saved project tag, difficulty impression</li>
+            <li><strong>Responds to:</strong> forgetting routes and projects; fragmented session memory</li>
+          </ul>
+          <p>This sketch focuses on fast post-climb logging so users can remember what they did without heavy manual input.</p>
+        </article>
+        <article class="card reveal sketch-card">
+          <span class="kicker">Sketch 6</span>
+          <h3>Friendly Micro-Challenge Board</h3>
+          <ul>
+            <li><strong>Focus:</strong> challenge / circle screen</li>
+            <li><strong>Main feature shown:</strong> small-group weekly challenge, progress bar, friend avatars, encouragement messages</li>
+            <li><strong>Responds to:</strong> motivation fades between sessions; users want playful features without public competition</li>
+          </ul>
+          <p>This sketch tests a friend-based challenge model that creates social motivation without relying on leaderboards.</p>
+        </article>
+        <article class="card reveal sketch-card">
+          <span class="kicker">Sketch 7</span>
+          <h3>Social Check-In Feed</h3>
+          <ul>
+            <li><strong>Focus:</strong> lightweight social posting / activity updates</li>
+            <li><strong>Main feature shown:</strong> session check-in cards, achievement posts, route advice requests, reactions</li>
+            <li><strong>Responds to:</strong> weak post-session social continuity; need for recognition and shared momentum</li>
+          </ul>
+          <p>This sketch explores a lighter community feed centred on useful updates and encouragement rather than performance broadcasting.</p>
+        </article>
+        <article class="card reveal sketch-card">
+          <span class="kicker">Sketch 8</span>
+          <h3>Profile and Achievement Journey</h3>
+          <ul>
+            <li><strong>Focus:</strong> personal profile / progress view</li>
+            <li><strong>Main feature shown:</strong> milestones, climbing streaks, saved projects, visited gyms, badges, and progress history</li>
+            <li><strong>Responds to:</strong> users cannot easily see long-term growth; regular climbers want meaningful continuity</li>
+          </ul>
+          <p>This sketch frames the profile as a personal climbing journey that combines progress, memory, and exploration rewards.</p>
+        </article>
+      </div>
+
+      <div class="highlight-panel reveal crazy-eights-learning" style="margin-top: 1.5rem;">
+        <span class="kicker">What We Learned from Crazy Eights</span>
+        <h2>Progress, community, and discovery formed the strongest direction</h2>
+        <p>From the Crazy Eights sketches, we found that the most useful ideas were the ones that made progress easy to see, supported small-group social interaction, and encouraged users to discover new climbing opportunities. These directions matched our earlier research findings, especially the need for clearer session-to-session continuity, easier partner-finding, and playful but low-pressure motivation.</p>
+        <p>The sketching exercise also helped us narrow the scope for the next stage. Some ideas, such as quick logging, circles, challenges, and event discovery, were easier to turn into screens and user flows. Other ideas, such as a large public feed or more detailed analytics, felt less suitable for an initial prototype. Based on this, our low-fidelity prototype should focus on a hybrid direction that combines progress, community, and discovery in a simpler mobile-first flow.</p>
+      </div>
+    </section>
+
+    <section id="design-alternatives" class="section container flow-section">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">9. Design Alternatives</span>
+          <h2>Comparing three possible product directions</h2>
+        </div>
+        <p>The alternatives were developed from the ideation themes and Crazy Eights sketches, then compared against user needs, playful requirements, and mobile-first feasibility.</p>
+      </div>
+
+      <div class="grid-3 alternatives-grid">
+        <article class="card reveal alternative-card">
+          <span class="kicker">Alternative 1</span>
+          <h3>Social Matching First</h3>
+          <p><strong>Concept:</strong> The system is primarily organised around helping users find climbing partners, join sessions, and stay socially connected, with progress tracking as a supporting feature.</p>
+          <p><strong>Core interaction model:</strong> Users enter the app to discover who to climb with, what sessions are available, and what events are happening nearby. Social coordination is the main entry point.</p>
+          <div class="alternative-group">
+            <h4>Strengths</h4>
+            <ul>
+              <li>Directly addresses partner-finding and community discovery pain points</li>
+              <li>Strong for beginners who need low-pressure entry into the community</li>
+              <li>Creates visible social value quickly</li>
+            </ul>
+          </div>
+          <div class="alternative-group">
+            <h4>Weaknesses</h4>
+            <ul>
+              <li>Progress tracking may feel secondary</li>
+              <li>Could become too close to a coordination tool rather than a climbing-growth product</li>
+              <li>Risk of weak long-term value if users do not use social features often</li>
+            </ul>
+          </div>
+          <p><strong>Playfulness support:</strong> Supports Climb Circles and exploration badges well, but may underplay personal progress quests.</p>
+          <p><strong>Technical feasibility:</strong> Moderate. Filtering, matching, and event views are feasible in low-fi and high-fi, but deeper social coordination logic may become more complex later.</p>
+          <p><strong>Suitable user type:</strong> Best for beginners, socially motivated climbers, and users who mainly need community entry points.</p>
+        </article>
+
+        <article class="card reveal alternative-card">
+          <span class="kicker">Alternative 2</span>
+          <h3>Progress Tracking First</h3>
+          <p><strong>Concept:</strong> The system is primarily structured around logging climbs, remembering projects, and visualising improvement over time, with social features layered around that core.</p>
+          <p><strong>Core interaction model:</strong> Users come into the app mainly to log sessions, review progress, and receive supportive goal prompts or quests.</p>
+          <div class="alternative-group">
+            <h4>Strengths</h4>
+            <ul>
+              <li>Strong match for the clearest recurring need: visible and meaningful progress</li>
+              <li>Easy to justify personas and questionnaire findings</li>
+              <li>Gives the product a clear functional core</li>
+            </ul>
+          </div>
+          <div class="alternative-group">
+            <h4>Weaknesses</h4>
+            <ul>
+              <li>Social/community value may feel less immediate</li>
+              <li>May appear too close to existing tracking tools if not designed carefully</li>
+              <li>Risks becoming individually useful but socially thin</li>
+            </ul>
+          </div>
+          <p><strong>Playfulness support:</strong> Supports Session-to-Session Progress Quest strongly, but needs careful integration of circles and discovery to avoid feeling too private.</p>
+          <p><strong>Technical feasibility:</strong> High. Logging, dashboard views, saved projects, and milestones are relatively clear to prototype as a web app.</p>
+          <p><strong>Suitable user type:</strong> Best for regular climbers and users who already climb consistently but want better continuity and motivation.</p>
+        </article>
+
+        <article class="card reveal alternative-card">
+          <span class="kicker">Alternative 3</span>
+          <h3>Hybrid Progress + Community Motivation</h3>
+          <p><strong>Concept:</strong> The system combines a personal progress core with small-group social motivation and lightweight discovery features, balancing individual continuity with community participation.</p>
+          <p><strong>Core interaction model:</strong> Users can quickly log sessions and see progress, but the app also surfaces circles, beginner sessions, events, partner-finding, and exploration rewards in connected ways.</p>
+          <div class="alternative-group">
+            <h4>Strengths</h4>
+            <ul>
+              <li>Responds to all three strongest design opportunities: progress, motivation, and social connectedness</li>
+              <li>Fits the must-have playful features more naturally than the other two options</li>
+              <li>More differentiated from existing products because it combines multiple user needs coherently</li>
+            </ul>
+          </div>
+          <div class="alternative-group">
+            <h4>Weaknesses</h4>
+            <ul>
+              <li>Requires tighter scope control to avoid feature overload</li>
+              <li>Needs careful homepage structure so that the system still feels simple</li>
+              <li>Must avoid becoming a weak compromise between too many directions</li>
+            </ul>
+          </div>
+          <p><strong>Playfulness support:</strong> Strongest overall fit for progress quests, micro-challenges, and discovery badges together.</p>
+          <p><strong>Technical feasibility:</strong> Moderate to high if scoped carefully. A focused MVP can implement the core flow without building every social feature in full detail.</p>
+          <p><strong>Suitable user type:</strong> Best for a mixed target group including beginners, student climbers, and regular users who want both progress and social motivation.</p>
         </article>
       </div>
 
       <div class="section-head reveal" style="margin-top: 4rem;">
         <div>
-          <span class="eyebrow">Prototype Links</span>
-          <h2>Explore the Figma prototypes</h2>
+          <span class="eyebrow">Comparison Table</span>
+          <h2>Evaluating keep, drop, and combine decisions</h2>
         </div>
-        <p>Open the low-fi and high-fi prototypes to see how the concept moves from structure to a more polished interaction flow.</p>
+        <p>The comparison shows why the hybrid model was kept, while the strongest parts of the other alternatives were combined into it.</p>
       </div>
-      <div class="grid-2 quick-grid">
-        <a class="card reveal" href="https://www.figma.com/proto/Wd4hF7HM4avDVkOgxS7fzF/Lowfi?node-id=18-8779&p=f&viewport=734%2C330%2C0.4&t=eVDMdgQ9bNLPty2g-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=18%3A8779&page-id=18%3A8267" target="_blank" rel="noreferrer">
-          <span class="kicker">Prototype 01</span>
-          <h3>Low-Fi Prototype</h3>
-          <p>A quick structural walkthrough showing layout, task flow, and the core navigation idea in early form.</p>
-        </a>
-        <a class="card reveal" href="https://www.figma.com/proto/3rzo6xkJ3HK2IvhV846v5b/high-fi?node-id=7-719&p=f&viewport=-671%2C361%2C0.35&t=7hxHXMP8SO4U2PVl-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7%3A719&page-id=7%3A718" target="_blank" rel="noreferrer">
-          <span class="kicker">Prototype 02</span>
-          <h3>High-Fi Prototype</h3>
-          <p>A more polished version with refined visuals, clearer interaction states, and a stronger presentation of the final experience.</p>
-        </a>
+      <div class="requirements-table-wrap alternatives-table-wrap reveal">
+        <table class="requirements-table alternatives-table">
+          <thead>
+            <tr>
+              <th>Alternative</th>
+              <th>Main concept</th>
+              <th>Best for</th>
+              <th>Strengths</th>
+              <th>Weaknesses</th>
+              <th>Playfulness</th>
+              <th>Feasibility</th>
+              <th>Keep / Drop / Combine</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="Alternative">Social Matching First</td>
+              <td data-label="Main concept">Community entry through partner-finding and event discovery</td>
+              <td data-label="Best for">Beginners, socially motivated climbers</td>
+              <td data-label="Strengths">Strong social value, welcoming entry, partner-focused</td>
+              <td data-label="Weaknesses">Progress becomes secondary</td>
+              <td data-label="Playfulness">Medium-High</td>
+              <td data-label="Feasibility">Moderate</td>
+              <td data-label="Keep / Drop / Combine">Combine</td>
+            </tr>
+            <tr>
+              <td data-label="Alternative">Progress Tracking First</td>
+              <td data-label="Main concept">Personal logging, memory, and progress visibility</td>
+              <td data-label="Best for">Regular climbers, self-improvement users</td>
+              <td data-label="Strengths">Clear need fit, easy to prototype, strong functional core</td>
+              <td data-label="Weaknesses">Can feel socially thin</td>
+              <td data-label="Playfulness">Medium</td>
+              <td data-label="Feasibility">High</td>
+              <td data-label="Keep / Drop / Combine">Combine</td>
+            </tr>
+            <tr>
+              <td data-label="Alternative">Hybrid Progress + Community Motivation</td>
+              <td data-label="Main concept">Progress core with social circles and discovery</td>
+              <td data-label="Best for">Mixed user group</td>
+              <td data-label="Strengths">Best overall alignment with findings and playful features</td>
+              <td data-label="Weaknesses">Needs tighter scoping</td>
+              <td data-label="Playfulness">High</td>
+              <td data-label="Feasibility">Moderate-High</td>
+              <td data-label="Keep / Drop / Combine">Keep</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="highlight-panel reveal final-choice-panel" style="margin-top: 1.5rem;">
+        <div class="final-choice-copy">
+          <span class="kicker">Final Choice</span>
+          <h2>Hybrid progress with low-pressure community motivation</h2>
+          <p>Based on the second-stage findings, the most suitable direction for the project is a hybrid model that combines progress tracking with low-pressure community motivation. The research does not support a purely social app or a purely individual tracking app. Instead, the findings repeatedly show that users want to keep improving, stay motivated between sessions, and feel socially connected without being pushed into overly competitive interaction. A hybrid direction therefore provides the best fit with the project's main pain points and must-have playful requirements.</p>
+          <p>In practice, this means the low-fidelity prototype should be built around a clear personal progress core, supported by small-group challenges, partner-finding, and community discovery. This direction is also realistic for implementation because the first prototype does not need to build every feature at full depth; it only needs to demonstrate a coherent user flow in which logging, progress feedback, and social motivation reinforce one another. For a student web-app project, this hybrid model offers the strongest balance between human-centred justification, playful interaction, and feasible development scope.</p>
+        </div>
+        <figure class="final-choice-image">
+          <img src="./image/final_choice.jpg" alt="Final choice visual showing the selected hybrid progress and community motivation direction.">
+        </figure>
       </div>
     </section>
 
-    <section id="evaluation" class="section container flow-section">
+    <section id="prototypes" class="section container flow-section">
       <div class="section-head reveal">
         <div>
-          <span class="eyebrow">8. Evaluation & Reflection</span>
-          <h2>Checking the concept against human needs</h2>
+          <span class="eyebrow">10-11. Prototypes</span>
+          <h2>Open the Figma prototype links</h2>
         </div>
-        <p>The final concept was evaluated against the user requirements, journey-map pain points, and the team's feasibility constraints for a mobile-first prototype.</p>
+        <p>The low-fidelity and high-fidelity prototypes show how the selected hybrid concept moves from structure to a more polished mobile interaction flow.</p>
       </div>
 
-      <div class="grid-3">
-        <article class="card reveal"><span class="kicker">Progress Visibility</span><h3>Guided Progress Quests</h3><p>Makes climbing improvement easier to see by breaking long-term goals into specific session-to-session milestones.</p></article>
-        <article class="card reveal"><span class="kicker">Social Motivation</span><h3>Climb Circles</h3><p>Builds accountability and encouragement through small-group challenges that feel friendly rather than competitive.</p></article>
-        <article class="card reveal"><span class="kicker">Community Discovery</span><h3>Exploration-Based Discovery</h3><p>Encourages users to explore events, spaces, and people in the climbing community instead of staying in a narrow routine.</p></article>
-      </div>
-
-      <div class="highlight-panel reveal journey-link-panel" style="margin-top: 1.5rem;">
-        <span class="kicker">Reflection</span>
-        <h2>From analysis to requirements</h2>
-        <p>The journey map directly informed the final requirements. Pain points around fragmented planning suggested the need for partner-finding and event discovery. Pain points during and after climbing suggested the need for low-friction logging and clear progress summaries. Pain points between sessions suggested the need for playful motivational loops, such as milestones, streaks, or friendly challenges. Together, these opportunities create a strong bridge from journey analysis to concrete user, functional, and playful requirements.</p>
+      <div class="grid-2 prototype-link-grid">
+        <a class="card reveal prototype-link-card" href="https://www.figma.com/proto/Wd4hF7HM4avDVkOgxS7fzF/Lowfi?node-id=18-8779&p=f&viewport=734%2C330%2C0.4&t=eVDMdgQ9bNLPty2g-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=18%3A8779&page-id=18%3A8267" target="_blank" rel="noreferrer">
+          <span class="kicker">10. Low-Fidelity Prototype</span>
+          <h3>View Low-Fi Figma Prototype</h3>
+          <p>Open the early structural prototype showing the core mobile flow, layout priorities, and main task sequence.</p>
+        </a>
+        <a class="card reveal prototype-link-card" href="https://www.figma.com/proto/3rzo6xkJ3HK2IvhV846v5b/high-fi?node-id=7-719&p=f&viewport=-671%2C361%2C0.35&t=7hxHXMP8SO4U2PVl-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=7%3A719&page-id=7%3A718" target="_blank" rel="noreferrer">
+          <span class="kicker">11. High-Fidelity Prototype</span>
+          <h3>View High-Fi Figma Prototype</h3>
+          <p>Open the polished prototype showing refined visual design, clearer interaction states, and the final mobile experience.</p>
+        </a>
       </div>
     </section>
 
@@ -580,6 +1047,22 @@
         <p>[2] A. Mazeas, M. Duclos, B. Pereira, and A. Chalabaev, "Evaluating the effectiveness of gamification on physical activity: A systematic review and meta-analysis," <em>JMIR Serious Games</em>, vol. 10, no. 1, 2022.</p>
         <p>[3] D. Wigfield et al., "A cross-sectional, survey-based study of equity, diversity, and inclusion in the Canadian indoor climbing community," <em>Journal of Exercise and Sport Sciences</em>, 2024.</p>
         <p>[AI-1] ChatGPT, GPT-5.4 Thinking, accessed on 2026-04-15, available at <a href="https://chatgpt.com" target="_blank" rel="noreferrer">https://chatgpt.com</a>. Used to visualize persona and journey maps.</p>
+      </div>
+    </section>
+
+    <section id="appendices" class="section container flow-section">
+      <div class="section-head reveal">
+        <div>
+          <span class="eyebrow">Appendices</span>
+          <h2>Supporting ethics documents</h2>
+        </div>
+      </div>
+      <div class="card reveal appendices-card">
+        <ol>
+          <li>CPT208.Ethics.InformationSheet.docx</li>
+          <li>CPT208.Ethics.InformedConsentForm.docx</li>
+          <li>CPT208.EthicsApproval.2026.pdf</li>
+        </ol>
       </div>
     </section>
   </main>

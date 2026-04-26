@@ -72,13 +72,10 @@ function setupSmoothScroll() {
 
 function applyRevealStagger() {
   const staggerGroups = [
-    '.stat-grid',
     '.grid-2',
     '.grid-3',
-    '.quick-grid',
     '.team-grid',
     '.persona-grid',
-    '.mock-list',
   ];
 
   staggerGroups.forEach((selector) => {
@@ -139,7 +136,7 @@ function setupReveal() {
   );
 
   revealElements.forEach((element) => {
-    if (element.closest('.hero') || element.classList.contains('page-hero')) {
+    if (element.closest('.hero')) {
       element.classList.add('visible');
       return;
     }
