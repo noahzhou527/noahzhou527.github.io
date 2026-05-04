@@ -2,6 +2,12 @@
 Rockbond is a CPT208 Human-Centric Computing project for Group C2-5.
 Track / Topic: Go Climbers.
 
+## Links
+
+Website: [https://noahzhou527.github.io](https://noahzhou527.github.io)
+
+GitHub repository: [https://github.com/noahzhou527/noahzhou527.github.io](https://github.com/noahzhou527/noahzhou527.github.io)
+
 The project presents a playful web-based climbing community experience.
 It helps climbers discover routes, record progress, and stay socially motivated.
 The site is built as a static GitHub Pages portfolio.
