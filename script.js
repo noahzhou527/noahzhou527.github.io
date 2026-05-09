@@ -70,6 +70,34 @@ function setupSmoothScroll() {
   });
 }
 
+function setupHeadingNavLinks() {
+  const labels = [...document.querySelectorAll(`
+    #research > .section-head:first-of-type .eyebrow,
+    #user-requirements > .section-head:first-of-type .eyebrow,
+    #ideation-alternatives > .section-head:first-of-type .eyebrow,
+    #technical-implementation > .section-head:first-of-type .eyebrow,
+    #evaluation-reflection > .section-head:first-of-type .eyebrow,
+    #references > .section-head:first-of-type .eyebrow
+  `)];
+
+  labels.forEach((label) => {
+    const headingGroup = label.parentElement;
+
+    if (!headingGroup || headingGroup.querySelector('.heading-nav-link')) {
+      return;
+    }
+
+    const link = document.createElement('a');
+    link.className = 'heading-nav-link';
+    link.href = '#site-nav';
+    link.textContent = 'Back to nav';
+    link.setAttribute('aria-label', 'Back to navigation');
+
+    headingGroup.classList.add('has-heading-nav-link');
+    label.insertAdjacentElement('afterend', link);
+  });
+}
+
 function applyRevealStagger() {
   const staggerGroups = [
     '.grid-2',
@@ -309,6 +337,7 @@ function setupGlowParallax() {
 }
 
 setupScrollIndicator();
+setupHeadingNavLinks();
 setupSmoothScroll();
 applyRevealStagger();
 setupPersonaCards();
